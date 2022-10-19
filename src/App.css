@@ -1,1 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 
+.App{
+    background-color: #FA743B;
+    display: flex;
+    height: 100vh;
+}
+
+.app-izquierda{
+    width: 50%;
+    background-image: url("./Imagenes/ImagenPantallaPrincipal.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-derecha{
+    width: 50%;
+}
+
+h1{
+  font-size: 70px;
+}
+
+.app-titulo{
+    margin-left: 15px;
+}
+
+.app-descripcion{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.app-botones{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background-color: #FA743B;
+    margin-top: 20px;
+}
+
+.spikes {
+    position: relative;
+    background: #FFB257;
+    height: 50vh;
+  }
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 25px;
+    background-size: 25px 100%;
+    background-image: linear-gradient(135deg, #FFB257 25%, transparent 25%), linear-gradient(225deg, #FFB257 25%, transparent 25%);
+    background-position: 0 0;
+  }
