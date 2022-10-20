@@ -6,6 +6,9 @@
 
 .App{
     background-color: #FA743B;
+}
+
+.contenedor-general{
     display: flex;
     height: 100vh;
 }
@@ -50,7 +53,7 @@ button{
 .spikes {
     position: relative;
     background: #FFB257;
-    height: 50vh;
+    height: 30vh;
   }
   .spikes::after {
     content: '';
