@@ -1,11 +1,14 @@
 import './App.css';
 import {useState} from 'react';
 import InicioSesion from './pages/InicioSesion/InicioSesion';
+import Registro from './pages/Registro/Registro';
 
 function App() {
 
   const [buttonPopupIniciarSesion, setButtonPopupIniciarSesion] = useState(false);
+  const [buttonPopupRegistrarse, setButtonPopupRegistrarse] = useState(false);
 
+  
 
   return (
     <div className="App">
@@ -26,11 +29,12 @@ function App() {
           </section>
           <div className="app-botones">
             <button type="button" class="btn btn-lg btn-warning" onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
-            <button type="button" class="btn btn-lg btn-warning">Registrarse</button>
+            <button type="button" class="btn btn-lg btn-warning" onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
           </div>
       </div>
       </div>
       <InicioSesion trigger={buttonPopupIniciarSesion} setTrigger={setButtonPopupIniciarSesion}></InicioSesion>
+      <Registro trigger={buttonPopupRegistrarse} setTrigger={setButtonPopupRegistrarse}></Registro>
     </div>
   );
 }

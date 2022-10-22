@@ -1,0 +1,123 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+    cursor: default;
+    z-index: 11;
+    margin: auto;
+}
+
+.popup-inner{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    min-height: 65%;
+    background-color: #FA743B;
+    border-width: 1px;
+    z-index: 11;
+    padding-left: 20px;
+}
+
+
+
+.formRegistro{
+    position: fixed;
+    width: 650px;
+    height: 90%;
+    overflow: auto;
+}
+
+.titleRegistro{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 30px;
+    color:black;
+}
+
+.drop{
+    position: relative;
+    top: 8%;
+    left: 8%;
+}
+
+.toggle{
+    background-color: white;
+    border-color: #3649F9;
+    width: 80%;
+    color:black;
+    text-align: left;
+}
+
+.item{
+    text-align: left;
+    width: 80%;
+}
+
+.botonRegistro{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 28px;
+    gap: 20px;
+    position: relative;
+    width: 30%;
+    background: #5B4FA6;
+    border-radius: 10px;
+    border-color: white;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    height: auto;
+    text-indent: 20%;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+.iniciar{
+    position: relative;
+    left: 33%;
+    top: 25%;
+    color:#3649F9;
+    transform: translate(-50%, -50%);
+}
+
+.contenedorErrorRegistro {
+    position: relative;
+    background: #F4BEBE;
+    border-width: 1;
+    height: 7%;
+    width: 70%;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9D0B0B;  
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+  }
+
+ .errorRegistro {
+    font-family: 'Poppins';
+    position: relative;
+    font-weight: bold;
+    font-size: 13px;
+    left: 18%;
+    top: 11%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #9D0B0B
+  }
