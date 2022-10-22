@@ -31,7 +31,7 @@
 .formRegistro{
     position: fixed;
     width: 650px;
-    height: 90%;
+    height: 60%;
     overflow: auto;
 }
 
@@ -47,7 +47,6 @@
 .drop{
     position: relative;
     top: 8%;
-    left: 8%;
 }
 
 .toggle{
@@ -63,12 +62,9 @@
     width: 80%;
 }
 
+
 .botonRegistro{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
     padding: 16px 28px;
-    gap: 20px;
     position: relative;
     width: 30%;
     background: #5B4FA6;
@@ -80,10 +76,6 @@
     font-weight: normal;
     font-size: 15px;
     height: auto;
-    text-indent: 20%;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -50%);
 }
 
 
@@ -120,4 +112,9 @@
     text-align: center;
     transform: translate(-50%, -50%);
     color: #9D0B0B
+  }
+
+  .formRegistro input{
+    margin-bottom: 5px;
+    margin-top: 5px;
   }

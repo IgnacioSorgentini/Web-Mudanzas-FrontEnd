@@ -92,36 +92,8 @@ function Registro(props) {
                         <div className="titulo-regitro">
                             <h3 className="titleRegistro"> ¡Create una cuenta! </h3>
                         </div>
-                        <div className="contenido-registro">   
-                            <text className="texto"> Ingrese su nombre: </text>
-                            <br/>
-                            <input className="input" type ="text" placeholder="Nombre"/>
-                            <br/>
-                            <text className="texto"> Ingrese su apellido: </text>
-                            <br/>
-                            <input className="input" type ="text" placeholder="Apellido"/>
-                            <br/>
-                            <text className="texto"> Ingrese su mail: </text>
-                            <br/>
-                            <input className="input" type ="text" placeholder="Mail" onChange={handleMailChange}/>
-                            <br/>
-                            {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
-                            {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o  <br/> se encuentra vacio</text></div>}
-                            <br/>
-                            <text className="texto"> Ingrese su telefono: </text>
-                            <br/>
-                            <input className="input" type ="text" placeholder="Telefono"/>
-                            <br/>
-                            <text className="texto">Ingrese su contraseña:</text>
-                            <br/>
-                            <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
-                            <br/>
-                            <text className="texto">Confirme su contraseña:</text>
-                            <input className="input" type ="password" placeholder="Contraseña" onChange={handleReingresoChange}/>
-                            {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
-                            {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
-                            <br/>
-                            <text className="texto">Seleccioná tu perfil:</text>
+                        <div className="contenido-registro">
+                        <text className="texto">Seleccioná tu perfil:</text>
                             <Dropdown className="drop">
                                 <Dropdown.Toggle className="toggle" id="dropdown-basic" >
                                     {texto}
@@ -132,45 +104,79 @@ function Registro(props) {
                                 </Dropdown.Menu>
                             </Dropdown>
                             <br/>
-                            {rol == 0 && <div> <br/><br/><text className="texto"> Ingrese su experiencia en años como profesor: </text> <br/>
-                            <input className="input" type ="text" placeholder="Experiencia"/> <br/>
-                            <text className="texto"> Ingrese su Titulo: </text>
-                            <input className="input" type ="text" placeholder="Titulo"/>
-                            </div>}
-                            {rol == 1 && <div> <br/><br/><text className="texto"> Ingrese su fecha de nacimiento: </text> <br/>
-                            <input className="input" type ="text" placeholder="Fecha de nacimiento"/> <br/>
-                            <text className="texto"> Indique estudios cursado o en curso: </text>
-                            <Dropdown className="drop">
-                                <Dropdown.Toggle className="toggle" id="dropdown-basic" >
-                                    Estudios
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="item">
-                                    <Dropdown.Item href="#/action-1" >Primario</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Secundario</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3" >Terciario</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-4" >Universitario</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                            </div>}
-                            <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
-                            <Dropdown className="drop">
-                                <Dropdown.Toggle className="toggle" id="dropdown-basic" >
-                                    {texto2}
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="item">
-                                    <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} >¿Como se llamaba/llama su primer mascota?</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                            <br/>
-                            <input className="input" type ="text" placeholder="Respuesta" onChange={handleRespuestaPreguntaChange} /> 
-                            <br/>
+                            {rol == 0 && 
+                                <div>
+                                    <input className="input" type ="text" placeholder="Nombre de la empresa"/>
+                                    <input className="input" type ="text" placeholder="Email personal o de la empresa" onChange={handleMailChange}/>
+                                    {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
+                                    {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o se encuentra vacio</text></div>}
+                                    <input className="input" type ="text" placeholder="Numero de contacto"/>
+                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
+                                    <br/>
+                                    <text className="texto">Confirme su contraseña:</text>
+                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handleReingresoChange}/>
+                                    {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
+                                    {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
+                                    <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
+                                    <Dropdown className="drop">
+                                        <Dropdown.Toggle className="toggle" id="dropdown-basic" >
+                                            {texto2}
+                                        </Dropdown.Toggle>
+                                        <Dropdown.Menu className="item">
+                                            <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} >¿Como se llamaba/llama su primer mascota?</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                    <input className="input" type ="text" placeholder="Respuesta" onChange={handleRespuestaPreguntaChange} />
+                                    <div className="botones-registro">
+                                        <button className="botonRegistro" onClick={verificaciones} >
+                                            CONFIRMAR
+                                        </button>
+                                        <button className="botonRegistro" onClick={() => props.setTrigger(false)}>
+                                            CANCELAR
+                                        </button>
+                                    </div>
+                                </div>
+                            }
+                            {rol == 1 && 
+                                <div>
+                                    <input className="input" type ="text" placeholder="Nombre"/>
+                                    <input className="input" type ="text" placeholder="Apellido"/>
+                                    <input className="input" type ="text" placeholder="Email" onChange={handleMailChange}/>
+                                    {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
+                                    {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o se encuentra vacio</text></div>}
+                                    <input className="input" type ="text" placeholder="País"/>
+                                    <input className="input" type ="text" placeholder="Ciudad"/>
+                                    <input className="input" type ="text" placeholder="Codigo postal"/>
+                                    <input className="input" type ="text" placeholder="Calle"/>
+                                    <input className="input" type ="text" placeholder="Numero de calle"/>
+                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
+                                    <text className="texto">Confirme su contraseña:</text>
+                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handleReingresoChange}/>
+                                    {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
+                                    {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
+                                    <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
+                                    <Dropdown className="drop">
+                                        <Dropdown.Toggle className="toggle" id="dropdown-basic" >
+                                            {texto2}
+                                        </Dropdown.Toggle>
+                                        <Dropdown.Menu className="item">
+                                            <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} >¿Como se llamaba/llama su primer mascota?</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                    <input className="input" type ="text" placeholder="Respuesta" onChange={handleRespuestaPreguntaChange} />
+                                    <div className="botones-registro">
+                                        <button className="botonRegistro" onClick={verificaciones} >
+                                            CONFIRMAR
+                                        </button>
+                                        <button className="botonRegistro" onClick={() => props.setTrigger(false)}>
+                                            CANCELAR
+                                        </button>
+                                    </div>
+                                </div>
+                            }
                         </div>
-                        <div className="botones-registro">
-                            <button className="botonRegistro" onClick={verificaciones} >
-                                CONFIRMAR
-                            </button>
-                        </div> 
                     </div>
                 </div>
             </div>
