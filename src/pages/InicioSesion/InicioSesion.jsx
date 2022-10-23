@@ -61,10 +61,10 @@ function InicioSesion(props){
                     <br/>
                     <div className="caja-botones">
                         <button className="boton btn btn-warning btn-lg" onClick={comprobarUsuario}>
-                            INGRESAR
+                            Ingresar
                         </button>
                         <button className="boton btn btn-warning btn-lg" onClick={() => props.setTrigger(false)}>
-                            CANCELAR
+                            Cancelar
                         </button>
                     </div> 
                 </div>
