@@ -2,6 +2,7 @@ import './App.css';
 import {useState} from 'react';
 import InicioSesion from './pages/InicioSesion/InicioSesion';
 import Registro from './pages/Registro/Registro';
+import RecuperacionContraseña from './pages/RecuperacionContraseña/RecuperacionContraseña';
 
 function App() {
 

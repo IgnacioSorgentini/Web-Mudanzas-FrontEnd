@@ -64,18 +64,12 @@
 
 
 .botonRegistro{
-    padding: 16px 28px;
     position: relative;
-    width: 30%;
-    background: #5B4FA6;
     border-radius: 10px;
-    border-color: white;
-    color: white;
-    font-family: 'Poppins';
+    color: black;
     font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
     height: auto;
+    margin-right: 15%;
 }
 
 

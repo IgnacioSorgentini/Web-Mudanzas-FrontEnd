@@ -1,9 +1,12 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 import './InicioSesion.css';
+import RecuperacionContraseña from "../RecuperacionContraseña/RecuperacionContraseña";
 
 function InicioSesion(props){
     
+    const [buttonPopupRecuperarContraseña, setButtonPopupRecuperarContraseña] = useState(false);
+
     const [validar, setValidar] = useState(-1);
     const [user, setUser] = useState('');   
     const [password,setPassword] = useState('')
@@ -52,7 +55,7 @@ function InicioSesion(props){
                     <text className="texto">Ingrese su contraseña:</text>
                     <br/>
                     <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange} onKeyDown={comprobarUsuarioConEnter}/>
-                    <a  className="vinculo" href="#">¿Olvidaste tu contraseña?</a> 
+                    <a  className="vinculo" href="#" onClick={() => setButtonPopupRecuperarContraseña(true)}>¿Olvidaste tu contraseña?</a> 
                     <br/>
                     {error == 0 && <div className="contenedorError"><text className="error">Los datos ingresados no son correctos</text></div>}
                     <br/>
@@ -65,7 +68,7 @@ function InicioSesion(props){
                         </button>
                     </div> 
                 </div>
-
+                <RecuperacionContraseña trigger={buttonPopupRecuperarContraseña} setTrigger={setButtonPopupRecuperarContraseña}></RecuperacionContraseña>
             </div>
         </div>
     ) : "";

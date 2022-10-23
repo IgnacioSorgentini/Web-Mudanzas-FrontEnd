@@ -167,11 +167,11 @@ function Registro(props) {
                                     </Dropdown>
                                     <input className="input" type ="text" placeholder="Respuesta" onChange={handleRespuestaPreguntaChange} />
                                     <div className="botones-registro">
-                                        <button className="botonRegistro" onClick={verificaciones} >
-                                            CONFIRMAR
+                                        <button className="botonRegistro btn btn-lg btn-warning" onClick={verificaciones} >
+                                            Confirmar
                                         </button>
-                                        <button className="botonRegistro" onClick={() => props.setTrigger(false)}>
-                                            CANCELAR
+                                        <button className="botonRegistro btn btn-lg btn-warning" onClick={() => props.setTrigger(false)}>
+                                            Cancelar
                                         </button>
                                     </div>
                                 </div>
