@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, useEffect} from 'react';
+import TextField from '@mui/material/TextField';
 import './InicioSesion.css';
 import RecuperacionContraseña from "../RecuperacionContraseña/RecuperacionContraseña";
 
@@ -47,14 +48,8 @@ function InicioSesion(props){
                     <h2 className="title"> Inicio de sesión </h2>
                 </div>
                 <div className="caja-contenido">
-                    <text className="texto"> Ingrese su mail: </text>
-                    <br/>
-                    <input className="input" type ="text" placeholder="Mail" onChange={handleUserChange}/>
-                    <br/>
-                    <br/>
-                    <text className="texto">Ingrese su contraseña:</text>
-                    <br/>
-                    <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange} onKeyDown={comprobarUsuarioConEnter}/>
+                    <TextField id="outlined-basic" label="Mail" variant="outlined" margin="normal" onChange={handleUserChange} fullWidth />
+                    <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" margin="normal" onChange={handlePasswordChange} onKeyDown={comprobarUsuarioConEnter} fullWidth />
                     <a  className="vinculo" href="#" onClick={() => setButtonPopupRecuperarContraseña(true)}>¿Olvidaste tu contraseña?</a> 
                     <br/>
                     {error == 0 && <div className="contenedorError"><text className="error">Los datos ingresados no son correctos</text></div>}
