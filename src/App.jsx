@@ -1,43 +1,45 @@
 import './App.css';
-import {useState} from 'react';
-import InicioSesion from './pages/InicioSesion/InicioSesion';
-import Registro from './pages/Registro/Registro';
-import RecuperacionContraseña from './pages/RecuperacionContraseña/RecuperacionContraseña';
+import HomeCliente from './pages/HomeCliente/HomeCliente';
+import Principal from './pages/Principal/Principal';
+import Compartir from './pages/Compartir/Compartir';
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import InfoEmpresa from './pages/InfoEmpresa/InfoEmpresa';
 
-function App() {
 
-  const [buttonPopupIniciarSesion, setButtonPopupIniciarSesion] = useState(false);
-  const [buttonPopupRegistrarse, setButtonPopupRegistrarse] = useState(false);
-
-  
-
+export default function App() {
   return (
-    <div className="App">
-      <div className="contenedor-general">
-      <div className="app-izquierda">
-        <div className="app-imagen">
-          
-        </div>
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Log</Link>
+            </li>
+            <li>
+              <Link to="/Home">Home</Link>
+            </li>
+            <li>
+              <Link to="/Share">Share</Link>
+            </li>
+            <li>
+              <Link to="/Empresa">Empresa</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Principal/>} ></Route>
+          <Route path="/Home" element={<HomeCliente/>} ></Route>
+          <Route path="/Share" element={<Compartir/>} ></Route>
+          <Route path="/Empresa" element={<InfoEmpresa/>} ></Route>
+
+        </Routes>
       </div>
-      <div className="app-derecha">
-          <section class="spikes">
-            <div className="app-titulo">
-              <h1>MeMudo!</h1>
-            </div>
-            <div className="app-descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </div>
-          </section>
-          <div className="app-botones">
-            <button type="button" class="btn btn-lg btn-warning" onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
-            <button type="button" class="btn btn-lg btn-warning" onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
-          </div>
-      </div>
-      </div>
-      <InicioSesion trigger={buttonPopupIniciarSesion} setTrigger={setButtonPopupIniciarSesion}></InicioSesion>
-      <Registro trigger={buttonPopupRegistrarse} setTrigger={setButtonPopupRegistrarse}></Registro>
-    </div>
+    </BrowserRouter>
   );
 }
-
-export default App;
