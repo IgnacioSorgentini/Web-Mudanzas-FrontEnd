@@ -2,6 +2,9 @@ import React from "react";
 import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
 import './Registro.css';
 
 function Registro(props) {
@@ -106,15 +109,13 @@ function Registro(props) {
                             <br/>
                             {rol == 0 && 
                                 <div>
-                                    <input className="input" type ="text" placeholder="Nombre de la empresa"/>
-                                    <input className="input" type ="text" placeholder="Email personal o de la empresa" onChange={handleMailChange}/>
+                                    <TextField id="outlined-basic" label="Nombre de la empresa" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Mail personal o de la empresa" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
                                     {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
                                     {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o se encuentra vacio</text></div>}
-                                    <input className="input" type ="text" placeholder="Numero de contacto"/>
-                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
-                                    <br/>
-                                    <text className="texto">Confirme su contraseña:</text>
-                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handleReingresoChange}/>
+                                    <TextField label="Numero de telefono para el contacto" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
+                                    <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" onChange={handlePasswordChange} margin="normal" fullWidth />
+                                    <TextField id="outlined-password-input" label="Confirme su contraseña" type="password" autoComplete="current-password" onChange={handleReingresoChange} margin="normal" fullWidth />
                                     {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
                                     {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
                                     <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
@@ -127,7 +128,7 @@ function Registro(props) {
                                             <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                    <input className="input" type ="text" placeholder="Respuesta" onChange={handleRespuestaPreguntaChange} />
+                                    <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
                                         <button className="botonRegistro btn btn-lg btn-warning" onClick={verificaciones} >
                                             Confirmar
@@ -140,19 +141,18 @@ function Registro(props) {
                             }
                             {rol == 1 && 
                                 <div>
-                                    <input className="input" type ="text" placeholder="Nombre"/>
-                                    <input className="input" type ="text" placeholder="Apellido"/>
-                                    <input className="input" type ="text" placeholder="Email" onChange={handleMailChange}/>
+                                    <TextField id="outlined-basic" label="Nombre" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Apellido" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Email" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
                                     {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
                                     {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o se encuentra vacio</text></div>}
-                                    <input className="input" type ="text" placeholder="País"/>
-                                    <input className="input" type ="text" placeholder="Ciudad"/>
-                                    <input className="input" type ="text" placeholder="Codigo postal"/>
-                                    <input className="input" type ="text" placeholder="Calle"/>
-                                    <input className="input" type ="text" placeholder="Numero de calle"/>
-                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handlePasswordChange}/>
-                                    <text className="texto">Confirme su contraseña:</text>
-                                    <input className="input" type ="password" placeholder="Contraseña" onChange={handleReingresoChange}/>
+                                    <TextField id="outlined-basic" label="Pais" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Ciudad" variant="outlined" margin="normal" fullWidth />    
+                                    <TextField id="outlined-basic" label="Codigo postal" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Calle" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Numero de calle" variant="outlined" margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Contraseña" variant="outlined" onChange={handlePasswordChange} margin="normal" fullWidth />
+                                    <TextField id="outlined-basic" label="Confirme su contraseña" variant="outlined" onChange={handleReingresoChange} margin="normal" fullWidth />
                                     {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
                                     {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
                                     <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
@@ -165,7 +165,7 @@ function Registro(props) {
                                             <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                    <input className="input" type ="text" placeholder="Respuesta" onChange={handleRespuestaPreguntaChange} />
+                                    <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
                                         <button className="botonRegistro btn btn-lg btn-warning" onClick={verificaciones} >
                                             Confirmar
