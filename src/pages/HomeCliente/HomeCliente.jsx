@@ -11,11 +11,12 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Input from '@mui/material/Input';
 import Box from '@mui/material/Box';
+import Empresa from '../../components/Empresa/Empresa';
 
 export default function Home(){
     
     return(
-        <div style={{display:"flex",height:"100vh", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
+        <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-around" , borderRadius:"5px",margin:"20px",alignItems:"center"}}>
             <a style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}>MeMudo!</a>
             <Box  style={{display:"flex",backgroundColor:"#F2DC9B",width : 250,height: 40,borderRadius:"50px",alignItems:"center",flexDirection:"row", }}>
@@ -73,6 +74,15 @@ export default function Home(){
                   </div>
                 </Select>
             </FormControl></div>
+            </div>
+            <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "center"}}>
+              <Empresa />
+              <Empresa />
+              <Empresa />
+              <Empresa />
+              <Empresa />
+              <Empresa />
+              <Empresa />
             </div>
             </div>
     );
