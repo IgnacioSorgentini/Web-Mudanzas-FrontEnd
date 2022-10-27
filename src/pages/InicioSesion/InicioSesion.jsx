@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from 'react';
 import TextField from '@mui/material/TextField';
+import Alert from '@mui/material/Alert';
 import './InicioSesion.css';
 import RecuperacionContraseña from "../RecuperacionContraseña/RecuperacionContraseña";
 
@@ -52,7 +53,7 @@ function InicioSesion(props){
                     <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" margin="normal" onChange={handlePasswordChange} onKeyDown={comprobarUsuarioConEnter} fullWidth />
                     <a  className="vinculo" href="#" onClick={() => setButtonPopupRecuperarContraseña(true)}>¿Olvidaste tu contraseña?</a> 
                     <br/>
-                    {error == 0 && <div className="contenedorError"><text className="error">Los datos ingresados no son correctos</text></div>}
+                    {error == 0 && <Alert variant="filled" severity="error">Los datos ingresados no son correctos</Alert>}
                     <br/>
                     <div className="caja-botones">
                         <button className="boton btn btn-warning btn-lg" onClick={comprobarUsuario}>

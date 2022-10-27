@@ -5,6 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
+import Alert from '@mui/material/Alert';
 import './Registro.css';
 
 function Registro(props) {
@@ -111,13 +112,13 @@ function Registro(props) {
                                 <div>
                                     <TextField id="outlined-basic" label="Nombre de la empresa" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Mail personal o de la empresa" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
-                                    {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
-                                    {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o se encuentra vacio</text></div>}
+                                    {error == 2 && <Alert variant="filled" severity="error">El mail indicado ya se encuentra registrado</Alert>}
+                                    {error == 3 && <Alert variant="filled" severity="error">El mail indicado no esta en el formato correcto o se encuentra vacio</Alert>}
                                     <TextField label="Numero de telefono para el contacto" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" onChange={handlePasswordChange} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Confirme su contraseña" type="password" autoComplete="current-password" onChange={handleReingresoChange} margin="normal" fullWidth />
-                                    {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
-                                    {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
+                                    {error == 0 && <Alert variant="filled" severity="error">Las contraseñas no coinciden</Alert>}
+                                    {error == 4 && <Alert variant="filled" severity="error">La contraseña esta vacia</Alert>}
                                     <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
                                     <Dropdown className="drop">
                                         <Dropdown.Toggle className="toggle" id="dropdown-basic" >
@@ -144,17 +145,17 @@ function Registro(props) {
                                     <TextField id="outlined-basic" label="Nombre" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Apellido" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Email" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
-                                    {error == 2 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado ya se encuentra regsitrado</text></div>}
-                                    {error == 3 && <div className="contenedorErrorRegistro"><text className="errorRegistro">El mail indicado no esta en el formato correcto o se encuentra vacio</text></div>}
+                                    {error == 2 && <Alert variant="filled" severity="error">El mail indicado ya se encuentra registrado</Alert>}
+                                    {error == 3 && <Alert variant="filled" severity="error">El mail indicado no esta en el formato correcto o se encuentra vacio</Alert>}
                                     <TextField id="outlined-basic" label="Pais" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Ciudad" variant="outlined" margin="normal" fullWidth />    
                                     <TextField id="outlined-basic" label="Codigo postal" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Calle" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Numero de calle" variant="outlined" margin="normal" fullWidth />
-                                    <TextField id="outlined-basic" label="Contraseña" variant="outlined" onChange={handlePasswordChange} margin="normal" fullWidth />
-                                    <TextField id="outlined-basic" label="Confirme su contraseña" variant="outlined" onChange={handleReingresoChange} margin="normal" fullWidth />
-                                    {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden</text></div>}
-                                    {error == 4 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La contraseña esta vacia</text></div>}
+                                    <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" onChange={handlePasswordChange} margin="normal" fullWidth />
+                                    <TextField id="outlined-password-input" label="Confirme su contraseña" type="password" autoComplete="current-password" onChange={handleReingresoChange} margin="normal" fullWidth />
+                                    {error == 0 && <Alert variant="filled" severity="error">Las constraseñas no coinciden</Alert>}
+                                    {error == 4 && <Alert variant="filled" severity="error">La contraseña esta vacia</Alert>}
                                     <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
                                     <Dropdown className="drop">
                                         <Dropdown.Toggle className="toggle" id="dropdown-basic" >
