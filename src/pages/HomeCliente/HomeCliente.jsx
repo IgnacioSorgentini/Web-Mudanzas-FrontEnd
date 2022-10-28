@@ -16,6 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import Menu from '@mui/material/Menu';
 import Empresa from '../../components/Empresa/Empresa';
 import { Link } from 'react-router-dom';
+import MenuCliente from '../../components/Menu/MenuCliente';
 
 export default function Home(){
     
@@ -31,69 +32,34 @@ export default function Home(){
 
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
-          <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-around" , borderRadius:"5px",margin:"20px",alignItems:"center"}}>
-            <a style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}>MeMudo!</a>
-            <Box  style={{display:"flex",backgroundColor:"#F2DC9B",width : 250,height: 40,borderRadius:"50px",alignItems:"center",flexDirection:"row", }}>
-            <SearchIcon />
-            <Input placeholder="Buscar Empresa" />
-            </Box>
+          <MenuCliente />
+          <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:9,flexDirection:"row", borderRadius:"5px",margin:"20px",justifyContent:"space-around" }}>
             <div>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-                
-              >
-                <AccountCircle />
-              </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Mi perfil</MenuItem>
-                <MenuItem onClick={handleClose}><Link to="/">Cerrar sesion</Link></MenuItem>
-              </Menu>
-            </div>
-          </div>
-        <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:9,flexDirection:"row", borderRadius:"5px",margin:"20px",justifyContent:"space-around" }}>
-          <div>
-            <FormControl style={{backgroundColor:"#F2DC9B"}} sx={ { m: 1, minWidth: 200 }}>
-                <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
-                <Select >
-                  <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
-                    <Rating name="read-only" value={1}  readOnly/>
-                    <Rating name="read-only" value={2} readOnly />
-                    <Rating name="read-only" value={3} readOnly />
-                    <Rating name="read-only" value={4}  readOnly/>
-                    <Rating name="read-only" value={5}  readOnly/>
+              <FormControl style={{backgroundColor:"#F2DC9B"}} sx={ { m: 1, minWidth: 200 }}>
+                  <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
+                  <Select >
+                    <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
+                      <Rating name="read-only" value={1}  readOnly/>
+                      <Rating name="read-only" value={2} readOnly />
+                      <Rating name="read-only" value={3} readOnly />
+                      <Rating name="read-only" value={4}  readOnly/>
+                      <Rating name="read-only" value={5}  readOnly/>
                     </div>
-                </Select>
-            </FormControl></div>
+                  </Select>
+              </FormControl>
+            </div>
             <div>
-            <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
-                <InputLabel id="demo-simple-select-label">Zona</InputLabel>
-                <Select
-                >
-                    <MenuItem value={10}>1</MenuItem>
-                    <MenuItem value={20}>2</MenuItem>
-                    <MenuItem value={30}>3</MenuItem>
-                </Select>
-            </FormControl></div>
-            <div>
+              <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
+                  <InputLabel id="demo-simple-select-label">Zona</InputLabel>
+                  <Select
+                  >
+                      <MenuItem value={10}>1</MenuItem>
+                      <MenuItem value={20}>2</MenuItem>
+                      <MenuItem value={30}>3</MenuItem>
+                  </Select>
+              </FormControl>
+            </div>
+          <div>
             <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
                 <InputLabel id="demo-simple-select-label">Precios</InputLabel>
                 <Select>
@@ -103,7 +69,8 @@ export default function Home(){
                     <MenuItem value={30}>3</MenuItem>
                   
                 </Select>
-            </FormControl></div>
+            </FormControl>
+            </div>
             <div>
             <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
                 <InputLabel id="demo-simple-select-label">Servicios</InputLabel>
@@ -128,6 +95,6 @@ export default function Home(){
               <Empresa />
               <Empresa />
             </div>
-            </div>
+        </div>
     );
 }
