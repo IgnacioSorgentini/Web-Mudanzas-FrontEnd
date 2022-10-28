@@ -21,6 +21,11 @@
 .contenedor-nombre{
     margin-top: 5px;
     padding-left: 10px;
+    color: black;
+}
+
+.contenedor-nombre p{
+    text-decoration: none;
 }
 
 .contenedor-puntuacion{
@@ -29,6 +34,8 @@
 
 .contenedor-ubicacion{
     margin-top: 5px;
+    color: black;
+    text-decoration: none;
 }
 
 .contenedor-empresa div{

@@ -19,16 +19,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Log</Link>
-            </li>
-            <li>
               <Link to="/Home">Home</Link>
-            </li>
-            <li>
-              <Link to="/Share">Share</Link>
-            </li>
-            <li>
-              <Link to="/Empresa">Empresa</Link>
             </li>
           </ul>
         </nav>

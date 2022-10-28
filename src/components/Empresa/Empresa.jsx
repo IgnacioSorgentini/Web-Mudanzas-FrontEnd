@@ -10,7 +10,7 @@ function Empresa(){
 
             </div>
             <div className="contenedor-nombre">
-                Nombre empresa
+                <p>Nombre empresa</p>
             </div>
             <div className="contenedor-puntuacion">
                 <Rating name="read-only" value={4}  readOnly/>

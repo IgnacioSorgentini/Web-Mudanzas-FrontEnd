@@ -10,6 +10,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { Link } from 'react-router-dom';
 
 export default function Empresa(){
     
@@ -39,7 +40,7 @@ export default function Empresa(){
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
                             <Rating style={{fontSize:50}}/>
-                            <ShareIcon style={{fontSize:50}}/>
+                            <Link to="/Share"><ShareIcon style={{fontSize:50, textDecoration:"none", color:"black"}}/></Link>
                         </div>
                     </div>
                 </div>

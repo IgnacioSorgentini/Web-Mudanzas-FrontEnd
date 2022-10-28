@@ -11,10 +11,24 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Input from '@mui/material/Input';
 import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import Menu from '@mui/material/Menu';
 import Empresa from '../../components/Empresa/Empresa';
+import { Link } from 'react-router-dom';
 
 export default function Home(){
     
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    
+    const handleMenu = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+  
+    const handleClose = () => {
+      setAnchorEl(null);
+    }
+
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-around" , borderRadius:"5px",margin:"20px",alignItems:"center"}}>
@@ -23,7 +37,37 @@ export default function Home(){
             <SearchIcon />
             <Input placeholder="Buscar Empresa" />
             </Box>
-            <AccountCircleIcon style={{color:"#F2DC9B",fontSize:50}}></AccountCircleIcon>
+            <div>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+                
+              >
+                <AccountCircle />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Mi perfil</MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/">Cerrar sesion</Link></MenuItem>
+              </Menu>
+            </div>
           </div>
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:9,flexDirection:"row", borderRadius:"5px",margin:"20px",justifyContent:"space-around" }}>
           <div>
@@ -76,7 +120,7 @@ export default function Home(){
             </FormControl></div>
             </div>
             <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "center"}}>
-              <Empresa />
+              <Link to="/Empresa"><Empresa /></Link>
               <Empresa />
               <Empresa />
               <Empresa />
