@@ -1,0 +1,97 @@
+div .fondo-perfil{
+    display:flex;
+    height:100vh;
+    background-Color:#D9D9D9;
+    flex:1;
+    flex-Direction:column;
+    overflow:hidden;
+}
+div .nav-perfil{
+    display:flex;
+    background-color:#734E38;
+    height:10vh;
+    flex-direction:row;
+    justify-content:space-around;
+    border-radius:5px;
+    margin:10px;
+    align-items:center;
+    overflow:hidden;
+}
+
+div .logo{
+    font-weight: bold;
+    color:#F28D52;
+    font-size:50px;
+    text-decoration: none;
+}
+div .contenedor-perfil{
+    display:flex;
+    flex:9;
+    flex-direction:column;
+    align-items:center;
+    overflow:hidden;
+}
+div .contenedor-info-perfil{
+    display:flex;
+    flex-direction:row;
+    margin:20px;
+    width:90vw;
+}
+div .contenedor-editar-general{
+    display:flex;
+    flex:1;
+    margin:5px;
+    flex-direction:column;
+    align-items:stretch;
+}
+div .contenedor-editar{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+div .contenedor-icon{
+    display:flex;
+    border-radius:50px;
+    background-color:#A6836F;
+    flex-direction:row;
+    margin:5px;
+    align-items:center;
+    height:50vh;
+    width:50vh;
+    justify-content:center;
+    box-shadow: 20px 20px 10px grey;
+}
+.contenedor-mudanzas{
+    display:flex;
+    border-radius:10px;
+    background-color:#F2DC9B;
+    flex-direction:column;
+    margin:20px;
+    align-items:stretch;
+    height:75vh;
+    width:130vh;
+    justify-content:flex-start;
+    box-shadow: 20px 20px 10px grey;
+}
+
+.contenedor-mudanzas h1{
+    font-size:30px;
+    flex-direction:column;
+    font-weight:bold;
+}
+
+.contenedor-info-perfil h2, .contenedor-info-perfil h3{
+    font-size: 30px;
+}
+
+
+
+
+/*style={{display:"flex",height:"100vh",backgroundColor:"#D9D9D9",flex:1,flexDirection:"column",}}*/
+/*style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-around" , borderRadius:"5px",margin:"20px",alignItems:"center"}}*/
+/*style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}*/
+/*<div id="contenedor-perfil">*/
+/*style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}*/
+/*style={{display:"flex",borderRadius:"5px",backgroundColor:"#A6836F",flexDirection:"row",margin:"20px",alignItems:"stretch",height:"70vh",width:"100vh", justifyContent:"space-between",}}*/
+/*style={{display:"flex",borderRadius:"5px",backgroundColor:"#A6836F",flexDirection:"row",margin:"5px",alignItems:"center",height:"50vh",width:"50vh", justifyContent:"center",}}*/

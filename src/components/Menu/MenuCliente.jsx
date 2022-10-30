@@ -65,7 +65,7 @@ function MenuCliente() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Mi perfil</MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/PerfilCliente">Mi perfil</Link></MenuItem>
                 <MenuItem onClick={handleClose}><Link to="/">Cerrar sesion</Link></MenuItem>
               </Menu>
             </div>

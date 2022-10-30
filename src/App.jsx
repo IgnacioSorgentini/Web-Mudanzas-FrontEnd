@@ -2,6 +2,7 @@ import './App.css';
 import HomeCliente from './pages/HomeCliente/HomeCliente';
 import Principal from './pages/Principal/Principal';
 import Compartir from './pages/Compartir/Compartir';
+import PerfilCliente from './pages/PerfilCliente/PerfilCliente';
 import React from "react";
 import {
   BrowserRouter,
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/Home" element={<HomeCliente/>} ></Route>
           <Route path="/Share" element={<Compartir/>} ></Route>
           <Route path="/Empresa" element={<InfoEmpresa/>} ></Route>
+          <Route path="/PerfilCliente" element={<PerfilCliente />} ></Route>
 
         </Routes>
       </div>
