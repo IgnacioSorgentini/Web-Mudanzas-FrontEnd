@@ -25,7 +25,7 @@ function App() {
               <h1>MeMudo!</h1>
             </div>
             <div className="app-descripcion">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Bienvenido a MeMudo! Aquí usted podrá contratar y también ofrecer servicios para el transporte en las mudanzas. Ingrese ya sea como cliente u oferente y disfrute de la experiencia.  
             </div>
           </section>
           <div className="app-botones">
