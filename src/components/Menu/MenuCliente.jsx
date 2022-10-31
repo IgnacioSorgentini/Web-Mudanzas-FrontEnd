@@ -25,19 +25,8 @@ function MenuCliente() {
 
     return(
         <div className="menu">
-            <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-around" , borderRadius:"5px",margin:"20px",alignItems:"center"}}>
+            <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"5px",margin:"20px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
             <a style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}>MeMudo!</a>
-            <Box  style={{display:"flex",backgroundColor:"#F2DC9B",width : 250,height: 40,borderRadius:"50px",alignItems:"center",flexDirection:"row", }}>
-            <SearchIcon />
-            <Input placeholder="Buscar Empresa" />
-            </Box>
-            <div>
-                <Link to="/home">
-                <IconButton size="small" color="inherit">
-                    <LocalShippingIcon />Contratar empresa
-                </IconButton>
-                </Link>
-            </div>
             <div>
               <IconButton
                 size="small"
