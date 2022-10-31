@@ -17,20 +17,19 @@ import Stack from '@mui/material/Stack';
 import Empresa from '../../components/Empresa/Empresa';
 import { Link } from 'react-router-dom';
 import MenuCliente from '../../components/Menu/MenuCliente';
+import { BorderColor, BorderStyle } from '@mui/icons-material';
 
 export default function Home(){
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
-          <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:9,flexDirection:"row", borderRadius:"5px",margin:"20px" }}>
-            <div>
-            <FormControl style={{backgroundColor:"#F2DC9B"}} sx={ { m: 1, minWidth: 200 }}>
-            <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:55, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
+          <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:9,flexDirection:"row", borderRadius:"5px",margin:"20px", alignItems:'center' }}>
+          <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:55, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
             <SearchIcon />
             <Input placeholder="Buscar Empresa" />
-            </Box>
-            </FormControl>
-              <FormControl style={{backgroundColor:"#F2DC9B"}} sx={ { m: 1, minWidth: 200 }}>
+          </Box>
+            <div style={{display:'flex'}}>
+              <FormControl style={{backgroundColor:"#F2DC9B",}} sx={ { m: 1, minWidth: 200 }}>
                   <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
                   <Select >
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
@@ -82,7 +81,7 @@ export default function Home(){
             </FormControl></div>
             </div>
             <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "start"}}>
-              <Link to="/Empresa"><Empresa /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Gabriel Mudanzas" puntuacion={3} ubicacion="Palermo, CABA" /></Link>
               <Empresa />
               <Empresa />
               <Empresa />

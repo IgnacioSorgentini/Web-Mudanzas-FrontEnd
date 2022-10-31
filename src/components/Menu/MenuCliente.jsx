@@ -37,7 +37,7 @@ function MenuCliente() {
                 color="inherit"
                 
               >
-                <AccountCircle />Perfil
+                <AccountCircle style={{color:'#F2DC9B', fontSize:'40px'}}/>
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -54,8 +54,8 @@ function MenuCliente() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}><Link to="/PerfilCliente">Mi perfil</Link></MenuItem>
-                <MenuItem onClick={handleClose}><Link to="/">Cerrar sesion</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/PerfilCliente" style={{textDecoration:'none', color:'black'}}>Mi perfil</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/" style={{textDecoration:'none', color:'black'}}>Cerrar sesion</Link></MenuItem>
               </Menu>
             </div>
           </div>

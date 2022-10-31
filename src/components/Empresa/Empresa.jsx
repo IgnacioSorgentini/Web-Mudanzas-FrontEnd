@@ -3,20 +3,20 @@ import './Empresa.css';
 import Rating from '@mui/material/Rating';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-function Empresa(){
+function Empresa({nombre, puntuacion, ubicacion}){
     return(
         <div className="contenedor-empresa">
             <div className="contenedor-imagen">
 
             </div>
             <div className="contenedor-nombre">
-                <p>Nombre empresa</p>
+                <p>{nombre}</p>
             </div>
             <div className="contenedor-puntuacion">
-                <Rating name="read-only" value={4}  readOnly/>
+                <Rating name="read-only" value={puntuacion}  readOnly/>
             </div>
             <div className="contenedor-ubicacion">
-                <p><LocationOnIcon></LocationOnIcon>Palermo, CABA</p>
+                <p><LocationOnIcon></LocationOnIcon>{ubicacion}</p>
             </div>
         </div>
     )
