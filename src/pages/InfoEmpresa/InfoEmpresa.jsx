@@ -10,6 +10,8 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
+import Button from '@mui/material/Button';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import MenuCliente from '../../components/Menu/MenuCliente';
 
 export default function Empresa(){
@@ -41,7 +43,7 @@ export default function Empresa(){
                     <div style={{display:"flex",flex:7,flexDirection:"row",alignItems:"center",alignItems:"flex-start",margin:"20px"}}>
                         <CheckCircleIcon style={{color:"#F2DC9B",fontSize:40}}></CheckCircleIcon> <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
                     </div>
-                    <div style={{display:"flex",flex:2,margin:"20px",borderRadius:"5px",backgroundColor:"#F28D52",width:250,height:50,alignItems:"center",justifyContent:"center",fontSize:50}}>Contratar</div>
+                    <div style={{display:"flex", margin:"20px",width:170,height:50,alignItems:"center",justifyContent:"center"}}><Button variant="contained" size="large" endIcon={<AddShoppingCartIcon />}>Contratar</Button></div>
                 </div>
 
             </div>

@@ -22,7 +22,7 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/HomeOferente" style={{textDecoration:'none'}}>Home</Link>
+              <Link to="/HomeCliente" style={{textDecoration:'none'}}>Home</Link>
             </li>
           </ul>
         </nav>
