@@ -23,13 +23,13 @@ export default function Home(){
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
-          <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:9,flexDirection:"row", borderRadius:"5px",margin:"20px", alignItems:'center' }}>
-          <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:55, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
+          <div style={{display:"flex", backgroundColor:"#A6836F",flex:9,flexDirection:"row", borderRadius:"0px 0px 5px 5px",marginLeft:"20px", marginRight:"20px", paddingTop:"10px", paddingLeft:"10px", alignItems:'center' }}>
+          <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:40, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
             <SearchIcon />
             <Input placeholder="Buscar Empresa" />
           </Box>
             <div style={{display:'flex'}}>
-              <FormControl style={{backgroundColor:"#F2DC9B",}} sx={ { m: 1, minWidth: 200 }}>
+              <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
                   <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
                   <Select >
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
@@ -43,7 +43,7 @@ export default function Home(){
               </FormControl>
             </div>
             <div>
-              <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
+              <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
                   <InputLabel id="demo-simple-select-label">Zona</InputLabel>
                   <Select
                   >
@@ -54,7 +54,7 @@ export default function Home(){
               </FormControl>
             </div>
           <div>
-            <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
+            <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
                 <InputLabel id="demo-simple-select-label">Precios</InputLabel>
                 <Select>
                 
@@ -66,7 +66,7 @@ export default function Home(){
             </FormControl>
             </div>
             <div>
-            <FormControl style={{backgroundColor:"#F2DC9B"}} sx={{ m: 1, minWidth: 200 }}>
+            <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
                 <InputLabel id="demo-simple-select-label">Servicios</InputLabel>
                 <Select>
                   <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>

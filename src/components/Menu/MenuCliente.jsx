@@ -25,7 +25,7 @@ function MenuCliente() {
 
     return(
         <div className="menu">
-            <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"5px",margin:"20px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
+            <div style={{display:"flex",backgroundColor:"#734E38",height:"10vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"5px", marginTop:"20px", marginLeft:"20px", marginRight:"20px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
             <a style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}>MeMudo!</a>
             <div>
               <IconButton
