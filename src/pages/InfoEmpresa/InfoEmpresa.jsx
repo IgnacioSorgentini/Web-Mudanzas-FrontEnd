@@ -11,20 +11,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
+import Menu from '../../components/Menu/MenuCliente';
 
 export default function Empresa(){
     
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
-          <div style={{display:"flex",backgroundColor:"#734E38",flexDirection:"row",justifyContent:"space-around" , borderRadius:"5px",margin:"20px",alignItems:"center",height:"10vh"}}>
-            <a style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}>MeMudo!</a>
-            <Box  style={{display:"flex",backgroundColor:"#F2DC9B",width : 250,height: 40,borderRadius:"50px",alignItems:"center",flexDirection:"row", }}>
-            <SearchIcon />
-            <Input placeholder="Buscar Empresa" />
-            </Box>
-            <AccountCircleIcon style={{color:"#F2DC9B",fontSize:50}}></AccountCircleIcon>
-          </div>
-
+          <Menu />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
                 <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center", }}>
