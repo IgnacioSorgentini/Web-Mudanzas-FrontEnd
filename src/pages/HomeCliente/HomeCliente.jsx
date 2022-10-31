@@ -80,14 +80,14 @@ export default function Home(){
                 </Select>
             </FormControl></div>
             </div>
-            <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "start"}}>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Gabriel Mudanzas" puntuacion={3} ubicacion="Palermo, CABA" /></Link>
-              <Empresa />
-              <Empresa />
-              <Empresa />
-              <Empresa />
-              <Empresa />
-              <Empresa />
+            <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "center"}}>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Gabriel Mudanzas" puntuacion={3} ubicacion="CABA, Buenos Aires" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Mudate con Cristian!" puntuacion={4} ubicacion="Cipolletti, Rio Negro" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Mudanzas Ivana & co." puntuacion={5} ubicacion="Pehuajo, Buenos Aires" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Cordanzas" puntuacion={1} ubicacion="Cosquin, Cordoba" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Estepicursor" puntuacion={4} ubicacion="Santa Rosa, La Pampa" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Te llevamos!" puntuacion={2} ubicacion="Paraná, Entre Rios" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Transportista 'El Camionero'" puntuacion={5} ubicacion="Olavarria, Buenos Aires" /></Link>
             </div>
         </div>
     );
