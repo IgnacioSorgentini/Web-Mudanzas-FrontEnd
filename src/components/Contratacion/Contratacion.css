@@ -1,0 +1,13 @@
+.contratacion{
+    display: flex;
+    flex-direction: row;
+}
+
+.cliente-contratacion, .fecha-contratacion{
+    width: 50%;
+}
+
+.fecha-contratacion{
+    display: flex;
+    justify-content: end;
+}

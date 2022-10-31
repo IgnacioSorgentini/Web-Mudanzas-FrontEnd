@@ -11,13 +11,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
-import MenuCliente from '../../components/Menu/MenuCliente';
+import MenuOferente from '../../components/Menu/MenuOferente';
 
 export default function Empresa(){
     
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
-          <MenuCliente />
+          <MenuOferente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
                 <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center",height:"60vh",width:"40vw" }}>
