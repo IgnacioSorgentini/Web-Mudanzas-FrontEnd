@@ -5,6 +5,14 @@ import Input from '@mui/material/Input';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import CreateIcon from '@mui/icons-material/Create';
+import { styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import MenuCliente from '../../components/Menu/MenuCliente';
 
 //import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -14,6 +22,41 @@ import MenuCliente from '../../components/Menu/MenuCliente';
 import './PerfilCliente.css';
 
 export default function Share(){
+
+    const StyledTableCell = styled(TableCell)(({ theme }) => ({
+        [`&.${tableCellClasses.head}`]: {
+          backgroundColor: theme.palette.common.black,
+          color: theme.palette.common.white,
+        },
+        [`&.${tableCellClasses.body}`]: {
+          fontSize: 14,
+        },
+      }));
+      
+      const StyledTableRow = styled(TableRow)(({ theme }) => ({
+        '&:nth-of-type(odd)': {
+          backgroundColor: theme.palette.action.hover,
+        },
+        // hide last border
+        '&:last-child td, &:last-child th': {
+          border: 0,
+        },
+      }));
+
+      function createData(empresa, fecha, puntuacion) {
+        return { empresa, fecha, puntuacion };
+      }
+
+      const rows = [
+        createData('Mudate con Cristian', '24/05/2019', <Rating></Rating>),
+        createData('Mudate con Cristian', '07/10/2020', <Rating></Rating>),
+        createData('Mudanzas Ivana & co.', '15/06/2022', <Rating></Rating>),
+      ];
+
+
+
+
+
     return(
         <div class="fondo-perfil">
 
@@ -32,8 +75,29 @@ export default function Share(){
 
                     <div class="contenedor-mudanzas">
                         <h1>Mis Mudanzas</h1>
-                        <h2>Grupo Atlas <Rating ></Rating></h2>
-                        <h3>Mauricio Mudanzas <Rating ></Rating></h3>
+                        <TableContainer component={Paper}>
+                        <Table sx={{ minWidth: 500 }} aria-label="customized table">
+                            <TableHead>
+                                <TableRow>
+                                    <StyledTableCell>Empresa</StyledTableCell>
+                                    <StyledTableCell align="right">Fecha</StyledTableCell>
+                                    <StyledTableCell align="right">Mi puntuacion</StyledTableCell>
+
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {rows.map((row) => (
+                                    <StyledTableRow key={row.empresa}>
+                                    <StyledTableCell component="th" scope="row">
+                                        {row.empresa}
+                                    </StyledTableCell>
+                                    <StyledTableCell align="right">{row.fecha}</StyledTableCell>
+                                    <StyledTableCell align="right">{row.puntuacion}</StyledTableCell>
+                                    </StyledTableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
                     </div>
                 </div>
             </div>

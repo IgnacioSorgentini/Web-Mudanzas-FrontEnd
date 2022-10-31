@@ -81,7 +81,7 @@ export default function Home(){
                 </Select>
             </FormControl></div>
             </div>
-            <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "center"}}>
+            <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "start"}}>
               <Link to="/Empresa"><Empresa /></Link>
               <Empresa />
               <Empresa />
