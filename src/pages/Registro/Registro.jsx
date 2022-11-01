@@ -114,7 +114,7 @@ function Registro(props) {
                                     <TextField id="outlined-basic" label="Mail personal o de la empresa" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
                                     {error == 2 && <Alert variant="filled" severity="error">El mail indicado ya se encuentra registrado</Alert>}
                                     {error == 3 && <Alert variant="filled" severity="error">El mail indicado no esta en el formato correcto o se encuentra vacio</Alert>}
-                                    <TextField label="Numero de telefono para el contacto" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
+                                    <TextField label="Numero de telefono" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" onChange={handlePasswordChange} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Confirme su contraseña" type="password" autoComplete="current-password" onChange={handleReingresoChange} margin="normal" fullWidth />
                                     {error == 0 && <Alert variant="filled" severity="error">Las contraseñas no coinciden</Alert>}
@@ -131,10 +131,10 @@ function Registro(props) {
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
-                                        <button className="botonRegistro btn btn-lg btn-warning" onClick={verificaciones} >
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={verificaciones} >
                                             Confirmar
                                         </button>
-                                        <button className="botonRegistro btn btn-lg btn-warning" onClick={() => props.setTrigger(false)}>
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
                                             Cancelar
                                         </button>
                                     </div>
@@ -167,10 +167,10 @@ function Registro(props) {
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
-                                        <button className="botonRegistro btn btn-lg btn-warning" onClick={verificaciones} >
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={verificaciones} >
                                             Confirmar
                                         </button>
-                                        <button className="botonRegistro btn btn-lg btn-warning" onClick={() => props.setTrigger(false)}>
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
                                             Cancelar
                                         </button>
                                     </div>

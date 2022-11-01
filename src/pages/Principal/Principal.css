@@ -5,7 +5,7 @@
 }
 
 .App{
-    background-color: #FA743B;
+    background-color: #EEEEEE;
 }
 
 .contenedor-general{
@@ -48,7 +48,7 @@ h1{
 
 .spikes {
     position: relative;
-    background: #FFB257;
+    background: #D9D9D9;
     height: 30vh;
   }
   .spikes::after {
@@ -61,6 +61,6 @@ h1{
     display: block;
     height: 25px;
     background-size: 25px 100%;
-    background-image: linear-gradient(135deg, #FFB257 25%, transparent 25%), linear-gradient(225deg, #FFB257 25%, transparent 25%);
+    background-image: linear-gradient(135deg, #D9D9D9 25%, transparent 25%), linear-gradient(225deg, #D9D9D9 25%, transparent 25%);
     background-position: 0 0;
   }

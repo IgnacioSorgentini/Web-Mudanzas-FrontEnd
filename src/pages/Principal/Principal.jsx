@@ -22,18 +22,18 @@ function App() {
       <div className="app-derecha">
           <section class="spikes">
             <div className="app-titulo">
-              <h1>MeMudo!</h1>
+              <h1 style={{color:"#1B2430"}}>MeMudo!</h1>
             </div>
-            <div className="app-descripcion">
+            <div className="app-descripcion" style={{color:"#1B2430"}}>
               Bienvenido a MeMudo! Aquí usted podrá contratar y también ofrecer servicios para el transporte en las mudanzas. Ingrese ya sea como cliente u oferente y disfrute de la experiencia.  
             </div>
           </section>
           <div className="app-botones">
             <div style={{minWidth:"50%"}}>
-              <button type="button" class="btn btn-warning btn-lg btn-block w-100" onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
+              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
             </div>
             <div style={{minWidth:"50%"}}>
-              <button type="button" class="btn btn-warning btn-lg btn-block w-100" onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
+              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
             </div>
           </div>
       </div>
