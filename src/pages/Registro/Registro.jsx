@@ -147,7 +147,6 @@ function Registro(props) {
                                     <TextField id="outlined-basic" label="Email" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
                                     {error == 2 && <Alert variant="filled" severity="error">El mail indicado ya se encuentra registrado</Alert>}
                                     {error == 3 && <Alert variant="filled" severity="error">El mail indicado no esta en el formato correcto o se encuentra vacio</Alert>}
-                                    <TextField id="outlined-basic" label="Pais" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Ciudad" variant="outlined" margin="normal" fullWidth />    
                                     <TextField id="outlined-basic" label="Codigo postal" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Calle" variant="outlined" margin="normal" fullWidth />

@@ -29,8 +29,12 @@ function App() {
             </div>
           </section>
           <div className="app-botones">
-            <button type="button" class="btn btn-lg btn-warning" onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
-            <button type="button" class="btn btn-lg btn-warning" onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
+            <div style={{minWidth:"50%"}}>
+              <button type="button" class="btn btn-warning btn-lg btn-block w-100" onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
+            </div>
+            <div style={{minWidth:"50%"}}>
+              <button type="button" class="btn btn-warning btn-lg btn-block w-100" onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
+            </div>
           </div>
       </div>
       </div>
