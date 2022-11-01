@@ -11,11 +11,22 @@ import HomeIcon from '@mui/icons-material/Home';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Button from '@mui/material/Button';
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import MenuCliente from '../../components/Menu/MenuCliente';
 
 export default function Empresa(){
     
+    const Item = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+      }));
+
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
@@ -39,11 +50,38 @@ export default function Empresa(){
                     </div>
                 </div>
 
-                <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#A6836F",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw"}}>
-                    <div style={{display:"flex",flex:7,flexDirection:"row",alignItems:"center",alignItems:"flex-start",margin:"20px"}}>
-                        <CheckCircleIcon style={{color:"#F2DC9B",fontSize:40}}></CheckCircleIcon> <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
+                <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#A6836F",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
+                    <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
+                        <CheckCircleIcon style={{color:"#F2DC9B",fontSize:35}}></CheckCircleIcon> <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
                     </div>
-                    <div style={{display:"flex", margin:"20px",width:170,height:50,alignItems:"center",justifyContent:"center"}}><Button variant="contained" size="large" endIcon={<AddShoppingCartIcon />}>Contratar</Button></div>
+                    <div style={{display:"flex", flexDirection:"row", boxSizing:"border-box", minWidth:"100%", minHeight:"60%", padding:"10px"}}>
+                    <Box sx={{ flexGrow: 1 }}>
+                            <Grid container spacing={3}>
+                                <Grid item xs={8}>
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 1</Item>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 2</Item>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 3</Item>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 4</Item>
+                                </Grid>
+                                <Grid item xs={4}>
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 5</Item>
+                                </Grid>
+                                <Grid item xs="auto">
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 3</Item>
+                                </Grid>
+                                <Grid item xs= {8}>
+                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 3</Item>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </div>
+                    <div style={{display:"flex",minWidth:"100%", minHeight:"20%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<AddShoppingCartIcon />}>Contratar</Button></div>
                 </div>
 
             </div>
