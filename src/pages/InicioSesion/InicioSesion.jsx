@@ -5,6 +5,12 @@ import Alert from '@mui/material/Alert';
 import './InicioSesion.css';
 import RecuperacionContraseña from "../RecuperacionContraseña/RecuperacionContraseña";
 
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
 function InicioSesion(props){
     
     const [buttonPopupRecuperarContraseña, setButtonPopupRecuperarContraseña] = useState(false);
@@ -57,7 +63,8 @@ function InicioSesion(props){
                     <br/>
                     <div className="caja-botones">
                         <button className="boton btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={comprobarUsuario}>
-                            Ingresar
+                        <Link to="/HomeOferente" style={{textDecoration:'none',color:'#EEEEEE'}}>Ingr</Link>
+                        <Link to="/HomeCliente" style={{textDecoration:'none',color:'#EEEEEE'}}>esar</Link>
                         </button>
                         <button className="boton btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
                             Cancelar

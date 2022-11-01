@@ -84,13 +84,12 @@ export default function Home(){
             </div>
           </div>
             <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "center", marginTop:"20px"}}>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Gabriel Mudanzas" puntuacion={3} ubicacion="CABA, Buenos Aires" /></Link>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Mudate con Cristian!" puntuacion={4} ubicacion="Cipolletti, Rio Negro" /></Link>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Mudanzas Ivana & co." puntuacion={5} ubicacion="Pehuajo, Buenos Aires" /></Link>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Cordanzas" puntuacion={1} ubicacion="Cosquin, Cordoba" /></Link>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Estepicursor" puntuacion={4} ubicacion="Santa Rosa, La Pampa" /></Link>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Te llevamos!" puntuacion={2} ubicacion="Paraná, Entre Rios" /></Link>
-              <Link to="/Empresa" style={{textDecoration:'none'}}><Empresa nombre="Transportista 'El Camionero'" puntuacion={5} ubicacion="Olavarria, Buenos Aires" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Gabriel Mudanzas",ubicacion:"CABA, Buenos Aires",puntuacion:3,telefono:"4245-6598",direccion:"Independencia 701",mail:"gabriel@mudanzas.com",descripcion:"somos una empresa de familia que se preocupa por la satisfaccion del cliente"}}><Empresa nombre="Gabriel Mudanzas" puntuacion={3} ubicacion="CABA, Buenos Aires" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Mudate con Cristian!",ubicacion:"Cipolletti, Rio Negro",puntuacion:4,telefono:"0254-6529",direccion:"Av San Luis 542",mail:"cristianmudanzas@gmail.com",descripcion:"La empresa Nro 1 de mudanzas de Rio Negro"}}><Empresa nombre="Mudate con Cristian!" puntuacion={4} ubicacion="Cipolletti, Rio Negro" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Mudanzas Ivana & co.",ubicacion:"Pehuajo, Buenos Aires",puntuacion:5,telefono:"2365-1547",direccion:"Rawson 2343",mail:"mudanzasivana@gmail.com",descripcion:"La empresa lider en mudanzas de Pehuajo"}} ><Empresa nombre="Mudanzas Ivana & co." puntuacion={5} ubicacion="Pehuajo, Buenos Aires" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Cordanzas",ubicacion:"Cosquin, Cordoba",puntuacion:1,telefono:"5452-6235",direccion:"Araoz Alfaro 1421",mail:"cordanzas@outlook.com",descripcion:"Fuimos la empresa en ayudar con la mudanza y logistica de las bandas en el Cosquin Rock"}} ><Empresa nombre="Cordanzas" puntuacion={1} ubicacion="Cosquin, Cordoba" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Estepicursor",ubicacion:"Santa Rosa, La Pampa",puntuacion:4,telefono:"8458-6952",direccion:"Av Uruguay 983",mail:"estepicursor@outlook.com",descripcion:"Empresa de familia lider en la Pampa"}} ><Empresa nombre="Estepicursor" puntuacion={4} ubicacion="Santa Rosa, La Pampa" /></Link>
+              <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Transportista 'El Camionero",ubicacion:"Olavarria, Buenos Aires",puntuacion:5,telefono:"4587-6138",direccion:"Rivadavia 6658",mail:"elcamionero@hotmail.com",descripcion:"Empresa con camiones de primera calidad"}}><Empresa nombre="Transportista 'El Camionero" puntuacion={5} ubicacion="Olavarria, Buenos Aires" /></Link>
             </div>
         </div>
     );

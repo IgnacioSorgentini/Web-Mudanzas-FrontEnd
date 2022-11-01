@@ -19,13 +19,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/HomeCliente" style={{textDecoration:'none'}}>Home</Link>
-            </li>
-          </ul>
-        </nav>
         <Routes>
           <Route path="/" element={<Principal/>} ></Route>
           <Route path="/HomeCliente" element={<HomeCliente />} ></Route>
