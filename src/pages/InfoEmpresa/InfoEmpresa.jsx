@@ -16,9 +16,12 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import MenuCliente from '../../components/Menu/MenuCliente';
+import { useLocation } from 'react-router-dom'
 
 export default function Empresa(){
-    
+    const location = useLocation()
+    const { from } = location.state
+
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -39,12 +42,12 @@ export default function Empresa(){
                         />
                         <div style={{alignItems:"center"}}>
                             <LocationOnIcon/>
-                            Localidad
+                            {location.state.ubicacion}
                         </div>
-                        <div style={{fontSize:30}}>Nombre empresa</div>
+                        <div style={{fontSize:30}}>{location.state.nombre}</div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                            <Rating style={{fontSize:50}}/>
+                            <Rating style={{fontSize:50}} value={location.state.puntuacion}/>
                             <ShareIcon style={{fontSize:50}}/>
                         </div>
                     </div>
@@ -87,7 +90,7 @@ export default function Empresa(){
             </div>
 
             <div style={{display:"flex",margin:"20px",backgroundColor:"#A6836F",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
-                Descripcion de la empresa
+            {location.state.descripcion}
             </div>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
                 <div style={{display:"flex",backgroundColor:"#F2DC9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
@@ -108,9 +111,9 @@ export default function Empresa(){
                 </div>
             </div>
             <div style={{display:"flex",backgroundColor:"#A6836F",margin:"20px",width:"90vw",height:150,borderRadius:"5px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
-                <div><PhoneIcon/>Telefono</div>
-                <div><HomeIcon/>Direccion</div>
-                <div><MailIcon/>Mail</div>
+                <div><PhoneIcon/>{location.state.telefono}</div>
+                <div><HomeIcon/>{location.state.direccion}</div>
+                <div><MailIcon/>{location.state.mail}</div>
             </div>
 
         </div>
