@@ -17,6 +17,12 @@ import EditIcon from '@mui/icons-material/Edit';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 export default function Empresa(){
     
@@ -27,6 +33,18 @@ export default function Empresa(){
         textAlign: 'center',
         color: theme.palette.text.secondary,
       }));
+
+
+
+    const [openEditar, setOpenEditar] = React.useState(false);
+
+    const handleClickOpenEditar = () => {
+    setOpenEditar(true);
+    };
+    
+    const handleCloseEditar = () => {
+    setOpenEditar(false);
+    };
 
 
     return(
@@ -82,12 +100,30 @@ export default function Empresa(){
                             </Grid>
                         </Box>
                     </div>
-                    <div style={{display:"flex",minWidth:"100%", minHeight:"20%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<EditIcon />}>Editar</Button></div>
+                    <div style={{display:"flex",minWidth:"100%", minHeight:"20%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<EditIcon />} onClick={handleClickOpenEditar}>Editar</Button></div>
+                    <Dialog open={openEditar} onClose={handleCloseEditar}>
+                        <DialogTitle>Editar informacion de la empresa</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText>
+                                Esta es la ventana para editar. Estaría bueno poner una Transfer List para elegir las caracteristicas que figuren en el perfil de la empresa.
+                            </DialogContentText>
+                            <TextField
+                                autoFocus
+                                margin="dense"
+                                id="name"
+                                label="Email Address"
+                                type="email"
+                                fullWidth
+                                variant="standard"
+                            />
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleCloseEditar}>Cancel</Button>
+                            <Button onClick={handleCloseEditar}>Subscribe</Button>
+                        </DialogActions>
+                    </Dialog>
                 </div>
-
-
             </div>
-
             <div style={{display:"flex",margin:"20px",backgroundColor:"#A6836F",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
                 Descripcion de la empresa
             </div>
