@@ -16,7 +16,27 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import MenuCliente from '../../components/Menu/MenuCliente';
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Slider from '@mui/material/Slider';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
+
 
 export default function Empresa(){
     const location = useLocation()
@@ -29,6 +49,44 @@ export default function Empresa(){
         textAlign: 'center',
         color: theme.palette.text.secondary,
       }));
+
+
+      const [stateSimulador, setStateSimulador] = React.useState({
+        bottom: false,
+      });
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+          return;
+        }
+        setStateSimulador({ ...stateSimulador, [anchor]: open });
+    };
+    const list = () => (
+        <Box
+          sx={{ width: 'auto'}}
+          role="presentation"
+          onKeyDown={toggleDrawer('bottom', false)}
+        >
+        <div style={{padding:"5%"}}>
+            <p>Simulador de costos</p>
+            <p>Deslize la barra segun la cantidad de kilometros y observe cambiar el precio final</p>
+            <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+        </div>
+        </Box>
+      );
+
+
+
+      const [openContratar, setOpenContratar] = React.useState(false);
+      const theme = useTheme();
+      const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+      const handleClickOpenContratar = () => {
+        setOpenContratar(true);
+      };
+      const handleCloseContratar = () => {
+        setOpenContratar(false);
+      };
+
+      
 
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
@@ -84,7 +142,33 @@ export default function Empresa(){
                             </Grid>
                         </Box>
                     </div>
-                    <div style={{display:"flex",minWidth:"100%", minHeight:"20%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<AddShoppingCartIcon />}>Contratar</Button></div>
+                    <div style={{minWidth:"100%", minHeight:"20%", boxSizing:"border-box", display:"flex", flexDirection:"row", justifyContent:"end"}}>
+                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<AttachMoneyIcon />} onClick={toggleDrawer('bottom', true)}>Simular costos</Button></div>
+                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<AddShoppingCartIcon /> } onClick={handleClickOpenContratar}>Contratar</Button></div>
+                        <Dialog
+                            fullScreen={fullScreen}
+                            open={openContratar}
+                            onClose={handleCloseContratar}
+                            aria-labelledby="responsive-dialog-title"
+                            >
+                                <DialogTitle id="responsive-dialog-title">
+                                    {"Contratar empresa"}
+                                </DialogTitle>
+                                <DialogContent>
+                                    <DialogContentText>
+                                        Contenido
+                                    </DialogContentText>
+                                </DialogContent>
+                                <DialogActions>
+                                    <Button autoFocus onClick={handleCloseContratar}>
+                                        Contratar
+                                    </Button>
+                                    <Button onClick={handleCloseContratar} autoFocus>
+                                        Cancelar
+                                    </Button>
+                                </DialogActions>
+                            </Dialog>
+                    </div>
                 </div>
 
             </div>
@@ -115,9 +199,19 @@ export default function Empresa(){
                 <div><HomeIcon/>{location.state.direccion}</div>
                 <div><MailIcon/>{location.state.mail}</div>
             </div>
+        </div>
 
-        </div>
-        </div>
+        <React.Fragment key={'bottom'}>
+          <SwipeableDrawer
+            anchor={'bottom'}
+            open={stateSimulador['bottom']}
+            onClose={toggleDrawer('bottom', false)}
+            onOpen={toggleDrawer('bottom', true)}
+          >
+            {list()}
+          </SwipeableDrawer>
+        </React.Fragment>
+    </div>
             
     );
 }
