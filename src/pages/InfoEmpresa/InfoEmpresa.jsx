@@ -35,7 +35,39 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { OutlinedInput, TextField } from '@mui/material';
+import InputAdornment from '@mui/material/InputAdornment';
 
+const marks = [
+    {
+      value: 50,
+      label: '50km',
+    },
+    {
+      value: 100,
+      label: '100km',
+    },
+    {
+      value: 150,
+      label: '150km',
+    },
+    {
+      value: 200,
+      label: '200km',
+    },
+    {
+        value: 250,
+        label: '250km'
+    },
+    {
+        value: 300,
+        label: '300km'
+    },
+    {
+        value: 350,
+        label: '350km'
+    },
+  ];
 
 
 export default function Empresa(){
@@ -48,12 +80,12 @@ export default function Empresa(){
         padding: theme.spacing(1),
         textAlign: 'center',
         color: theme.palette.text.secondary,
-      }));
+    }));
 
 
-      const [stateSimulador, setStateSimulador] = React.useState({
+    const [stateSimulador, setStateSimulador] = React.useState({
         bottom: false,
-      });
+    });
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
           return;
@@ -67,12 +99,40 @@ export default function Empresa(){
           onKeyDown={toggleDrawer('bottom', false)}
         >
         <div style={{padding:"5%"}}>
-            <p>Simulador de costos</p>
-            <p>Deslize la barra segun la cantidad de kilometros y observe cambiar el precio final</p>
-            <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+            <div>
+                <h3>Simulador de costos</h3>
+            </div>
+            <div>
+                <p>Deslize la barra segun la cantidad de kilometros y observe cambiar el precio final</p>
+            </div>
+            <div>
+
+            </div>
+            <div>
+                <OutlinedInput readOnly disabled
+                    value={valueSimulador * 2}
+                    size="small"
+                    startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                />
+                <Slider defaultValue={0} aria-label="Default" valueLabelDisplay="auto" min={0} max={400} step={5} marks={marks}  onChange={handleSliderChange} aria-labelledby="input-slider" />
+            </div>
         </div>
         </Box>
       );
+
+
+
+      const [valueSimulador, setValueSimulador] = React.useState(0);
+      const handleSliderChange = (event, newValue) => {
+        setValueSimulador(newValue);
+      };
+     
+
+
+
+
+
+
 
 
 
@@ -86,7 +146,6 @@ export default function Empresa(){
         setOpenContratar(false);
       };
 
-      
 
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
