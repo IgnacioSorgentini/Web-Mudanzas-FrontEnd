@@ -323,7 +323,7 @@ export default function Empresa(){
             <div style={{display:"flex",margin:"20px",backgroundColor:"#A6836F",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
                 Descripcion de la empresa
             </div>
-            <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
+            <div style={{display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
                 <div style={{display:"flex",backgroundColor:"#F2DC9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
                 <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
                 <Rating/>
