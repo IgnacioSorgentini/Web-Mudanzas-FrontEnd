@@ -6,6 +6,7 @@
 
 .App{
     background-color: #EEEEEE;
+    overflow:hidden;
 }
 
 .contenedor-general{

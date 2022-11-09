@@ -48,7 +48,7 @@ export default function Empresa(){
 
 
     return(
-        <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
+        <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column",overflow:"hidden"}}>
           <MenuOferente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>

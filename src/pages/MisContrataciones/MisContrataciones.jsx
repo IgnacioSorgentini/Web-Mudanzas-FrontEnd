@@ -57,7 +57,7 @@ function MisContrataciones(){
     
     
     return(
-        <div className="MisContrataciones" style={{display:"flex", backgroundColor:"#D9D9D9",height:'100vh',flexDirection:"column"}}>
+        <div className="MisContrataciones" style={{display:"flex", backgroundColor:"#D9D9D9",height:'100vh',flexDirection:"column",overflow:"hidden"}}>
             <MenuOferente />
             <div className="contenedor-contrataciones">
                 <div className="en-proceso">

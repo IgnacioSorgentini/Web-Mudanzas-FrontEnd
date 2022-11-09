@@ -21,7 +21,7 @@ import { BorderColor, BorderStyle } from '@mui/icons-material';
 
 export default function Home(){
     return(
-        <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column", height:'100vh'}}>
+        <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column", height:'100vh',overflow:"hidden"}}>
           <MenuCliente />
           <div style={{display:"flex", justifyContent:"space-between",flexDirection:"row", borderRadius:"0px 0px 7px 7px",marginLeft:"20px", marginRight:"20px", }}>
             <div style={{display:"flex", flexDirection:"row", backgroundColor:"#A6836F", borderRadius:"0px 0px 7px 7px"}}>
