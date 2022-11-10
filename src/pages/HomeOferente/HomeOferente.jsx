@@ -31,6 +31,9 @@ import Checkbox from '@mui/material/Checkbox';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import Divider from '@mui/material/Divider';
+import InputAdornment from '@mui/material/InputAdornment';
+import { OutlinedInput } from '@mui/material';
+import InputLabel from '@mui/material/InputLabel';
 
 
 //Estas tres funciones son para la Transfer List que está en la ventana Editar.
@@ -308,6 +311,21 @@ export default function Empresa(){
                                 type="email"
                                 fullWidth
                                 variant="standard"
+                            />
+                            </DialogContentText>
+                            </div>
+                            <div style={{marginTop:"50px"}}>
+                            <DialogContentText>
+                                Modificar precio por kilometro a cobrar
+                                <OutlinedInput
+                                autoFocus
+                                margin=""
+                                id="precioACobrar"
+                                label="Precio"
+                                type="email"
+                                fullWidth
+                                variant="standard"
+                                startAdornment={<InputAdornment position="start">$</InputAdornment>}
                             />
                             </DialogContentText>
                             </div>

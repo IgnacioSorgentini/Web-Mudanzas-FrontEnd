@@ -43,14 +43,14 @@ export default function Share(){
         },
       }));
 
-      function createData(empresa, fecha, puntuacion) {
-        return { empresa, fecha, puntuacion };
+      function createData(empresa, fecha, estado, puntuacion) {
+        return { empresa, fecha, estado, puntuacion };
       }
 
       const rows = [
-        createData('Mudate con Cristian', '24/05/2019', <Rating></Rating>),
-        createData('Mudate con Cristian', '07/10/2020', <Rating></Rating>),
-        createData('Mudanzas Ivana & co.', '15/06/2022', <Rating></Rating>),
+        createData('Mudate con Cristian', '24/05/2019', 'Finalizada', <Rating></Rating>),
+        createData('Mudate con Cristian', '07/10/2020', 'Finalizada', <Rating></Rating>),
+        createData('Mudanzas Ivana & co.', '15/06/2022', 'Finalizada', <Rating></Rating>),
       ];
 
 
@@ -83,6 +83,7 @@ export default function Share(){
                                 <TableRow>
                                     <StyledTableCell>Empresa</StyledTableCell>
                                     <StyledTableCell align="right">Fecha</StyledTableCell>
+                                    <StyledTableCell align="right">Estado</StyledTableCell>
                                     <StyledTableCell align="right">Mi puntuacion</StyledTableCell>
 
                                 </TableRow>
@@ -94,6 +95,7 @@ export default function Share(){
                                         {row.empresa}
                                     </StyledTableCell>
                                     <StyledTableCell align="right">{row.fecha}</StyledTableCell>
+                                    <StyledTableCell align="right">{row.estado}</StyledTableCell>
                                     <StyledTableCell align="right">{row.puntuacion}</StyledTableCell>
                                     </StyledTableRow>
                                 ))}

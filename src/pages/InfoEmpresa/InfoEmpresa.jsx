@@ -215,8 +215,9 @@ export default function Empresa(){
                                 </DialogTitle>
                                 <DialogContent>
                                     <DialogContentText>
-                                        Contenido
+                                        Ingrese su numero de telefono para que la empresa pueda contactarse con usted
                                     </DialogContentText>
+                                    <TextField label="Numero de telefono" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
                                 </DialogContent>
                                 <DialogActions>
                                     <Button autoFocus onClick={handleCloseContratar}>
