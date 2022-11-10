@@ -37,6 +37,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { OutlinedInput, TextField } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { Mail } from '@mui/icons-material';
 
 const marks = [
     {
@@ -147,6 +152,19 @@ export default function Empresa(){
       };
 
 
+
+      const [openCompartir, setOpenCompartir] = React.useState(false);
+      const handleClickOpenCompartir = () => {
+        setOpenCompartir(true);
+      };
+      const handleCloseCompartir = () => {
+        setOpenCompartir(false);
+      };
+
+
+
+
+
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
@@ -165,7 +183,50 @@ export default function Empresa(){
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
                             <Rating style={{fontSize:50}} value={location.state.puntuacion}/>
-                            <ShareIcon style={{fontSize:50}}/>
+                            <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:50}}/></Button>
+                            <Dialog
+                                open={openCompartir}
+                                onClose={handleCloseCompartir}
+                                aria-labelledby="alert-dialog-title"
+                                aria-describedby="alert-dialog-description"
+                            >
+                                <DialogTitle id="alert-dialog-title">
+                                    {"Compartir informacion de la empresa"}
+                                </DialogTitle>
+                                <DialogContent>
+                                    <DialogContentText id="alert-dialog-description">
+                                        Seleccione una vía por la cual desee compartir la informacion de {location.state.nombre} con algun conocido.
+                                    </DialogContentText>
+                                    <div>
+                                        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                                          <ListItem>
+                                            <ListItemAvatar>
+                                              <Avatar>
+                                                <WhatsAppIcon />
+                                              </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary="Whatsapp" />
+                                          </ListItem>
+                                          <ListItem>
+                                            <ListItemAvatar>
+                                              <Avatar>
+                                                <InstagramIcon />
+                                              </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary="Instagram" />
+                                          </ListItem>
+                                          <ListItem>
+                                            <ListItemAvatar>
+                                              <Avatar>
+                                                <MailIcon />
+                                              </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary="Mail" />
+                                          </ListItem>
+                                        </List>
+                                    </div>
+                                </DialogContent>
+                            </Dialog>
                         </div>
                     </div>
                 </div>
