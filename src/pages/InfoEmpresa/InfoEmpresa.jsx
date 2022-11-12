@@ -115,7 +115,7 @@ export default function Empresa(){
             </div>
             <div>
                 <OutlinedInput readOnly disabled
-                    value={valueSimulador * 2}
+                    value={valueSimulador * location.state.precioXKm}
                     size="small"
                     startAdornment={<InputAdornment position="start">$</InputAdornment>}
                 />

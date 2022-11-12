@@ -3,7 +3,7 @@ import './Empresa.css';
 import Rating from '@mui/material/Rating';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-function Empresa({nombre, puntuacion, ubicacion}){
+function Empresa({nombre, puntuacion, ubicacion, precioXKm}){
     return(
         <div className="contenedor-empresa">
             <div className="contenedor-imagen">
