@@ -30,10 +30,10 @@ function App() {
           </section>
           <div className="app-botones">
             <div style={{minWidth:"50%"}}>
-              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
+              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#5C5C5C", color:"#EEEEEE"}} onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
             </div>
             <div style={{minWidth:"50%"}}>
-              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
+              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#5C5C5C", color:"#EEEEEE"}} onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
             </div>
           </div>
       </div>
