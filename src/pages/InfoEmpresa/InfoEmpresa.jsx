@@ -231,40 +231,40 @@ export default function Empresa(){
                     </div>
                 </div>
 
-                <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#A6836F",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
+                <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#ADADAD",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
-                        <CheckCircleIcon style={{color:"#F2DC9B",fontSize:35}}></CheckCircleIcon> <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
+                        <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
                     </div>
                     <div style={{display:"flex", flexDirection:"row", boxSizing:"border-box", minWidth:"100%", minHeight:"60%", padding:"10px"}}>
                     <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={3}>
                                 <Grid item xs={8}>
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 1</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 1</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 2</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 2</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 3</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 4</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 4</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 5</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 5</Item>
                                 </Grid>
                                 <Grid item xs="auto">
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 3</Item>
                                 </Grid>
                                 <Grid item xs= {8}>
-                                    <Item style={{backgroundColor:"#F2DC9B"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 3</Item>
                                 </Grid>
                             </Grid>
                         </Box>
                     </div>
                     <div style={{minWidth:"100%", minHeight:"20%", boxSizing:"border-box", display:"flex", flexDirection:"row", justifyContent:"end"}}>
-                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<AttachMoneyIcon />} onClick={toggleDrawer('bottom', true)}>Simular costos</Button></div>
-                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#FD841F"}} size="large" endIcon={<AddShoppingCartIcon /> } onClick={handleClickOpenContratar}>Contratar</Button></div>
+                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<AttachMoneyIcon />} onClick={toggleDrawer('bottom', true)}>Simular costos</Button></div>
+                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<AddShoppingCartIcon /> } onClick={handleClickOpenContratar}>Contratar</Button></div>
                         <Dialog
                             fullScreen={fullScreen}
                             open={openContratar}
@@ -294,28 +294,28 @@ export default function Empresa(){
 
             </div>
 
-            <div style={{display:"flex",margin:"20px",backgroundColor:"#A6836F",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
+            <div style={{display:"flex",margin:"20px",backgroundColor:"#ADADAD",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
             {location.state.descripcion}
             </div>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
-                <div style={{display:"flex",backgroundColor:"#F2DC9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
+                <div style={{display:"flex",backgroundColor:"#ADADAD",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
+                <AccountCircleIcon style={{color:"#5C5C5C",fontSize:50}}></AccountCircleIcon>
                 <Rating/>
                 </div>
-                <div style={{display:"flex",backgroundColor:"#F2DC9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
+                <div style={{display:"flex",backgroundColor:"#ADADAD",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
+                <AccountCircleIcon style={{color:"#5C5C5C",fontSize:50}}></AccountCircleIcon>
                 <Rating/>
                 </div>
-                <div style={{display:"flex",backgroundColor:"#F2DC9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
+                <div style={{display:"flex",backgroundColor:"#ADADAD",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
+                <AccountCircleIcon style={{color:"#5C5C5C",fontSize:50}}></AccountCircleIcon>
                 <Rating/>
                 </div>
-                <div style={{display:"flex",backgroundColor:"#F2DC9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
+                <div style={{display:"flex",backgroundColor:"#ADADAD",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
+                <AccountCircleIcon style={{color:"#5C5C5C",fontSize:50}}></AccountCircleIcon>
                 <Rating/>
                 </div>
             </div>
-            <div style={{display:"flex",backgroundColor:"#A6836F",margin:"20px",width:"90vw",height:150,borderRadius:"5px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
+            <div style={{display:"flex",backgroundColor:"#5C5C5C",margin:"20px",width:"90vw",height:150,borderRadius:"5px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
                 <div><PhoneIcon/>{location.state.telefono}</div>
                 <div><HomeIcon/>{location.state.direccion}</div>
                 <div><MailIcon/>{location.state.mail}</div>

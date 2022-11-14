@@ -66,7 +66,7 @@ export default function Share(){
                     <div class="contenedor-editar-general">
                         <div class="contenedor-editar" >
                             <div class="contenedor-icon">
-                                <AccountCircleIcon style={{color:"#F2DC9B",fontSize:290}}></AccountCircleIcon>
+                                <AccountCircleIcon style={{color:"black",fontSize:290}}></AccountCircleIcon>
                             </div>
                             <div className="contenedor-nombre-mail">
                                 <h2>James Rodriguez <CreateIcon style={{fontSize:30}}></CreateIcon></h2>
