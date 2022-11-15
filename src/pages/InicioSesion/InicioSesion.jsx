@@ -65,10 +65,11 @@ function InicioSesion(props){
                     {error == 0 && <Alert variant="filled" severity="error">Los datos ingresados no son correctos</Alert>}
                     <br/>
                     <div className="caja-botones">
-                        <button className="boton btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={comprobarUsuario}>
+
+                        <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={comprobarUsuario}>
                             ingresar
                         </button>
-                        <button className="boton btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
+                        <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
                             Cancelar
                         </button>
                     </div> 

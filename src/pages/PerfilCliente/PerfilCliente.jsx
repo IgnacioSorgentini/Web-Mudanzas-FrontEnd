@@ -94,7 +94,7 @@ export default function Share(){
                             <div class="contenedor-icon">
                                 <AccountCircleIcon style={{color:"#F2DC9B",fontSize:290}}></AccountCircleIcon>
                             </div>
-                            <div className="contenedor-nombre-mail">
+                            <div className="contenedor-nombre-mail" style={{color:"#D9D9D9"}}>
                                 <h2>James Rodriguez <CreateIcon style={{fontSize:30}}></CreateIcon></h2>
                                 <h4>JRodriguez@gmail.com</h4>
                             </div>
@@ -102,7 +102,7 @@ export default function Share(){
                     </div>
 
                     <div class="contenedor-mudanzas">
-                        <h1>Mis Mudanzas</h1>
+                        <h1 style={{color:"#D9D9D9"}}>Mis Mudanzas</h1>
                         <TableContainer component={Paper}>
                         <Table sx={{ minWidth: 500 }} aria-label="customized table">
                             <TableHead>
