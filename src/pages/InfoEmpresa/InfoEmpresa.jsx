@@ -162,6 +162,14 @@ export default function Empresa(){
         setOpenCompartir(false);
       };
 
+      const [openMapa, setOpenMapa] = React.useState(false);
+      const handleClickOpenMapa = () => {
+        setOpenMapa(true);
+      };
+      const handleCloseMapa = () => {
+        setOpenMapa(false);
+      };
+
 
 
 
@@ -177,7 +185,16 @@ export default function Empresa(){
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
                         />
                         <div style={{alignItems:"center"}}>
-                            <LocationOnIcon/>
+                            
+                            <Button onClick={handleClickOpenMapa}><LocationOnIcon/></Button>
+                            <Dialog
+                              open={openMapa}
+                              onClose={handleCloseMapa}
+                              aria-labelledby="alert-dialog-title"
+                              aria-describedby="alert-dialog-description"
+                            >
+                              <iframe style={{height:"50vh",width:"40vw"}} src="https://maps.google.com/maps?q=Rawson%202343%20Buenos%20Aires&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </Dialog>
                             {location.state.ubicacion}
                         </div>
                         <div style={{fontSize:30}}>{location.state.nombre}</div>
