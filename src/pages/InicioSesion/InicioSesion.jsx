@@ -21,8 +21,11 @@ function InicioSesion(props){
     const [error,setError] = useState(1)
 
 
-    const userValido='pedroseveri@gmail.com'
+    const userValido='usuario@gmail.com'
     const pwValida= '123'
+
+    const userValido2='oferente@gmail.com'
+    const pwValida2= '123'
     
     const handleUserChange = (e) => {
     	setUser(e.target.value);
@@ -33,7 +36,7 @@ function InicioSesion(props){
   	};
 
     function comprobarUsuario () {
-        if (userValido === user && pwValida === password ){
+        if ((userValido === user && pwValida === password) || (userValido2 === user && pwValida2 === password) ){
             setValidar(0)
         }
         else{
@@ -63,8 +66,7 @@ function InicioSesion(props){
                     <br/>
                     <div className="caja-botones">
                         <button className="boton btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={comprobarUsuario}>
-                        <Link to="/HomeOferente" style={{textDecoration:'none',color:'#EEEEEE'}}>Ingr</Link>
-                        <Link to="/HomeCliente" style={{textDecoration:'none',color:'#EEEEEE'}}>esar</Link>
+                            ingresar
                         </button>
                         <button className="boton btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
                             Cancelar
@@ -75,6 +77,14 @@ function InicioSesion(props){
             </div>
         </div>
     ) : "";
+    }
+    else{
+        if (user == userValido){
+            window.location.replace("/HomeCliente")
+        }
+        else{
+            window.location.replace("/HomeOferente")
+        }
     }
 }
 

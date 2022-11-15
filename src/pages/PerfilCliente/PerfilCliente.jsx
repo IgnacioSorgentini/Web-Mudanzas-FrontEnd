@@ -14,6 +14,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import MenuCliente from '../../components/Menu/MenuCliente';
+import Comentario from '../../components/Comentario/Comentario';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dropdown from 'react-bootstrap/Dropdown';
+import {useState, useEffect} from 'react';
+
 
 //import LocationOnIcon from '@mui/icons-material/LocationOn';
 //import ShareIcon from '@mui/icons-material/Share';
@@ -43,20 +49,40 @@ export default function Share(){
         },
       }));
 
-      function createData(empresa, fecha, estado, puntuacion) {
+      function createData(empresa, fecha, estado,puntuacion) {
         return { empresa, fecha, estado, puntuacion };
       }
 
       const rows = [
-        createData('Mudate con Cristian', '24/05/2019', 'Finalizada', <Rating></Rating>),
-        createData('Mudate con Cristian', '07/10/2020', 'Finalizada', <Rating></Rating>),
-        createData('Mudanzas Ivana & co.', '15/06/2022', 'Finalizada', <Rating></Rating>),
+        createData('Mudate con Cristian', '24/05/2019', 'Finalizada',<Rating value ={5}></Rating>),
+        createData('Mudate con Cristian', '07/10/2020', 'Finalizada',<Rating value ={5}></Rating>),
+        createData('Mudanzas Ivana & co.', '15/06/2022', 'Finalizada', <Rating value ={5}></Rating>),
       ];
 
+      const [texto,setTexto] = useState('elegi la mudanza')
+      const [texto2,setTexto2] = useState('')
+      const [visibilidad,setVisivilidad] = useState(false)
 
+      function setMudanza1() {
+        setTexto(rows[0].empresa + ' ' + rows[0].fecha)
+    };
 
+    function setMudanza2() {
+        setTexto(rows[1].empresa + ' ' + rows[1].fecha)
+    };
 
+    function setMudanza3() {
+        setTexto(rows[2].empresa + ' ' + rows[2].fecha)
+    };
 
+    const handleSummit = (e) => {
+    	setTexto2(e.target.value);
+  	};
+
+    function setComentario (){
+        setVisivilidad(true)
+    };
+    
     return(
         <div class="fondo-perfil">
 
@@ -98,14 +124,37 @@ export default function Share(){
                                     <StyledTableCell align="right">{row.estado}</StyledTableCell>
                                     <StyledTableCell align="right">{row.puntuacion}</StyledTableCell>
                                     </StyledTableRow>
-                                ))}
+                                ))} 
                             </TableBody>
                         </Table>
                     </TableContainer>
+                    <br/>
+                    <h2>Dejanos un comentario!</h2>
+                    <Dropdown className="drop">
+                    <Dropdown.Toggle className="toggle" id="dropdown-basic"  >
+                        {texto}
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu className="item">
+                    <Dropdown.Item onClick={setMudanza1} >{rows[0].empresa + ' ' + rows[0].fecha} </Dropdown.Item>
+                    <Dropdown.Item onClick={setMudanza2} >{rows[1].empresa + ' ' + rows[1].fecha}</Dropdown.Item>
+                    <Dropdown.Item onClick={setMudanza3} >{rows[2].empresa + ' ' + rows[2].fecha}</Dropdown.Item>
+                    </Dropdown.Menu>
+                    </Dropdown>                   
+                    <br/>
+                    <br/>
+                    <br/>
+                    <TextField fullWidth label="escribe aqui tu comentario" id="fullWidth" onChange={handleSummit} />     
+                    <br/>            
+                    <Button variant="contained" onClick={setComentario}>Comenta</Button>
+                    <br/>  
+                    {visibilidad == true && 
+                    <Comentario usuario={texto} texto={texto2} puntuacion={5}/>}
                     </div>
+                    
                 </div>
             </div>
         </div>
+        
     );
 }
 
