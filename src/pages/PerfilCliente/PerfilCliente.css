@@ -53,7 +53,7 @@ div .contenedor-editar{
 div .contenedor-icon{
     display:flex;
     border-radius:50px;
-    background-color:#A6836F;
+    background-color:#939EBB;
     flex-direction:row;
     margin:5px;
     align-items:center;
@@ -65,7 +65,7 @@ div .contenedor-icon{
 .contenedor-mudanzas{
     display:flex;
     border-radius:10px;
-    background-color:#F2DC9B;
+    background-color:#939EBB;
     flex-direction:column;
     margin:20px;
     align-items:stretch;
@@ -95,7 +95,7 @@ div .contenedor-icon{
     min-height: 135px;
     width: 50vh;
     box-sizing: border-box;
-    background-color: #A6836F;
+    background-color: #939EBB;
     margin-left: 5px;
 }
 

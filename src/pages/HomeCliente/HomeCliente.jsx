@@ -24,7 +24,7 @@ export default function Home(){
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
           <div style={{display:"flex", justifyContent:"space-between",flexDirection:"row", borderRadius:"0px 0px 7px 7px",marginLeft:"20px", marginRight:"20px", }}>
-            <div style={{display:"flex", flexDirection:"row", backgroundColor:"#A6836F", borderRadius:"0px 0px 7px 7px"}}>
+            <div style={{display:"flex", flexDirection:"row", backgroundColor:"#939EBB", borderRadius:"0px 0px 7px 7px"}}>
             <div style={{display:'flex'}}>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
                   <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
@@ -76,7 +76,7 @@ export default function Home(){
               </FormControl>
             </div>
             </div>
-            <div style={{backgroundColor:"#A6836F", display:"flex", boxSizing:"border-box", paddingLeft:"10px", paddingRight:"10px", paddingTop:"6px", paddingBottom:"10px", borderRadius:"0px 0px 7px 7px"}}>
+            <div style={{backgroundColor:"#939EBB", display:"flex", boxSizing:"border-box", paddingLeft:"10px", paddingRight:"10px", paddingTop:"6px", paddingBottom:"10px", borderRadius:"0px 0px 7px 7px"}}>
               <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:40, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
                 <SearchIcon />
                 <Input placeholder="Buscar Empresa" />
