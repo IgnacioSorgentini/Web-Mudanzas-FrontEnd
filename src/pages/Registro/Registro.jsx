@@ -131,10 +131,10 @@ function Registro(props) {
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
-                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={verificaciones} >
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={verificaciones} >
                                             Confirmar
                                         </button>
-                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
                                             Cancelar
                                         </button>
                                     </div>
@@ -167,10 +167,10 @@ function Registro(props) {
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
-                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={verificaciones} >
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={verificaciones} >
                                             Confirmar
                                         </button>
-                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
                                             Cancelar
                                         </button>
                                     </div>
