@@ -99,10 +99,10 @@ function Registro(props) {
                         <div className="contenido-registro">
                         <text className="texto">Seleccioná tu perfil:</text>
                             <Dropdown className="drop">
-                                <Dropdown.Toggle className="toggle" id="dropdown-basic" >
+                                <Dropdown.Toggle className="toggle" id="dropdown-basic" style={{backgroundColor:"#F7D794"}} >
                                     {texto}
                                 </Dropdown.Toggle>
-                                <Dropdown.Menu className="item">
+                                <Dropdown.Menu className="item" style={{backgroundColor:"#F7D794"}}>
                                     <Dropdown.Item href="#/profesor" onClick={setOferente}>Oferente</Dropdown.Item>
                                     <Dropdown.Item href="#/alumno" onClick={setCliente}>Cliente</Dropdown.Item>
                                 </Dropdown.Menu>
@@ -121,20 +121,20 @@ function Registro(props) {
                                     {error == 4 && <Alert variant="filled" severity="error">La contraseña esta vacia</Alert>}
                                     <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
                                     <Dropdown className="drop">
-                                        <Dropdown.Toggle className="toggle" id="dropdown-basic" >
+                                        <Dropdown.Toggle className="toggle" id="dropdown-basic" style={{backgroundColor:"#F7D794"}} >
                                             {texto2}
                                         </Dropdown.Toggle>
-                                        <Dropdown.Menu className="item">
+                                        <Dropdown.Menu className="item" style={{backgroundColor:"#F7D794"}}>
                                             <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} >¿Como se llamaba/llama su primer mascota?</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
-                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={verificaciones} >
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"#black"}} onClick={verificaciones} >
                                             Confirmar
                                         </button>
-                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
+                                        <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"#black"}} onClick={() => props.setTrigger(false)}>
                                             Cancelar
                                         </button>
                                     </div>

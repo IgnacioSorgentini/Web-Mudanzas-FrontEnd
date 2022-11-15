@@ -8,7 +8,7 @@ div .fondo-perfil{
 }
 div .nav-perfil{
     display:flex;
-    background-color:#734E38;
+    background-color:#5B5772;
     height:10vh;
     flex-direction:row;
     justify-content:space-around;
@@ -20,7 +20,7 @@ div .nav-perfil{
 
 div .logo{
     font-weight: bold;
-    color:#F28D52;
+    color:#5B5772;
     font-size:50px;
     text-decoration: none;
 }
@@ -53,7 +53,7 @@ div .contenedor-editar{
 div .contenedor-icon{
     display:flex;
     border-radius:50px;
-    background-color:#A6836F;
+    background-color:#5B5772;
     flex-direction:row;
     margin:5px;
     align-items:center;
@@ -65,7 +65,7 @@ div .contenedor-icon{
 .contenedor-mudanzas{
     display:flex;
     border-radius:10px;
-    background-color:#F2DC9B;
+    background-color:#5B5772;
     flex-direction:column;
     margin:20px;
     align-items:stretch;
@@ -95,7 +95,7 @@ div .contenedor-icon{
     min-height: 135px;
     width: 50vh;
     box-sizing: border-box;
-    background-color: #A6836F;
+    background-color: #5B5772;
     margin-left: 5px;
 }
 

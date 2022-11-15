@@ -9,11 +9,12 @@
 }
 
 .en-proceso, .completadas{
-    background-color: #F2DC9B;
+    background-color: #5B5772;
     width: 45%;
     margin: 20px;
     border-radius: 10px;
     padding: 15px;
+    color: #D9D9D9
 }
 
 .lista-mudanzas{
