@@ -57,7 +57,7 @@ function RecuperacionContraseña(props){
                     <h3 className="titleCambioContraseña"> Cambio de contraseña </h3>
                     <TextField id="outlined-basic" label="¿Como se llama la calle donde viviste por primera vez?" variant="outlined" margin="normal" onChange={handleRespuestaPreguntaChange} fullWidth size="small" />
                     {validarPregunta == 1 && <div className="contenedorErrorRegistro"><text className="errorRegistro">La respuesta no es correcta</text></div>}
-                    <button className="botonCambioPass btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={verificaciones}>
+                    <button className="botonCambioPass btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={verificaciones}>
                         Confirmar
                     </button>
                     
@@ -66,7 +66,7 @@ function RecuperacionContraseña(props){
                     <TextField id="outlined-password-input" label="Confirme contraseña" type="password" autoComplete="current-password" margin="normal" onChange={handleReingresoChange} fullWidth size="small" />
                     </div>}
                     {error == 0 && <div className="contenedorErrorRegistro"><text className="errorRegistro">Las contraseñas no coinciden o esta en blanco</text></div>}
-                    <button className="botonCambioPass btn btn-lg" style={{backgroundColor:"#FD841F", color:"#EEEEEE"}} onClick={() => props.setTrigger(false)}>
+                    <button className="botonCambioPass btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
                         Cancelar
                     </button>                        
                 </div>

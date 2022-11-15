@@ -67,7 +67,7 @@ function InicioSesion(props){
                     <div className="caja-botones">
 
                         <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={comprobarUsuario}>
-                            ingresar
+                            Ingresar
                         </button>
                         <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
                             Cancelar

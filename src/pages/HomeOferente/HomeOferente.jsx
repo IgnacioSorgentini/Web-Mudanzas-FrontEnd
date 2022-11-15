@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Comentario from '../../components/Comentario/Comentario';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Input from '@mui/material/Input';
@@ -192,22 +193,22 @@ export default function Empresa(){
 
                 <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
-                        <CheckCircleIcon style={{color:"#F2DC9B",fontSize:35}}></CheckCircleIcon> <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
+                      <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
                     </div>
                     <div style={{display:"flex", flexDirection:"row", boxSizing:"border-box", minWidth:"100%", minHeight:"60%", padding:"10px"}}>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={3}>
                                 <Grid item xs={8}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 1</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Embalaje incluido</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 2</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Un unico transporte</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Personal calificado</Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 4</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}>Incluimos guardado de pertenencias</Item>
                                 </Grid>
                                 <Grid item xs={4}>
                                     <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 5</Item>
@@ -342,22 +343,12 @@ export default function Empresa(){
                 Descripcion de la empresa
             </div>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
-                <div style={{display:"flex",backgroundColor:"#8D8D9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
-                <Rating/>
-                </div>
-                <div style={{display:"flex",backgroundColor:"#8D8D9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
-                <Rating/>
-                </div>
-                <div style={{display:"flex",backgroundColor:"#8D8D9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
-                <Rating/>
-                </div>
-                <div style={{display:"flex",backgroundColor:"#8D8D9B",width:600,height:250,borderRadius:"5px",margin:"20px",flexDirection:"row",justifyContent:"space-between",}} >
-                <AccountCircleIcon style={{color:"red",fontSize:50}}></AccountCircleIcon>
-                <Rating/>
-                </div>
+                <Comentario usuario="Pedro Severi" texto="Excelente servicio!" puntuacion={5}/>
+                <Comentario usuario="Cristian Escujuri" texto="Me gustó, aunque no lo elegiría otra vez, creo que hay mejores opciones." puntuacion={4} />
+                <Comentario usuario="Ignacio Sorgentini" texto="Fueron rápidos, eficientes, y muy educados. Recomendadisimo." puntuacion={5}/>
+                <Comentario usuario="Ivana Cardozo" texto="Personalmente me pareció muy bueno todo! Volvería a contratar esta empresa." puntuacion={4}/>
+                <Comentario usuario="Gabriel Torres" texto="Despues de Cordanzas, considero que esta es la mejor empresa para hacer una mudanza." puntuacion={4}/>
+                <Comentario usuario="Franco Vercesi" texto="Me sorprende ver tantos comentarios positivos. En mi caso no fue una experiencia tan amena. Quizás no era su día." puntuacion={2}/>
             </div>
             <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"5px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
                 <div><PhoneIcon/>Telefono</div>

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     width: 20vw;
     height: 50vh;
-    background-color: rgba(128, 128, 228, .3);
+    background-color: rgba(141, 141, 155, .5);
     margin: 20px;
     border-radius: 5%;
 }
@@ -43,5 +43,5 @@
 }
 
 .contenedor-empresa:hover{
-    background-color: rgba(128, 128, 228, .5);
+    background-color: rgb(141, 141, 155, .3);
 }

@@ -186,7 +186,7 @@ export default function Empresa(){
                         />
                         <div style={{alignItems:"center"}}>
                             
-                            <Button onClick={handleClickOpenMapa}><LocationOnIcon/></Button>
+                            <Button onClick={handleClickOpenMapa} style={{color:"black"}}><LocationOnIcon/></Button>
                             <Dialog
                               open={openMapa}
                               onClose={handleCloseMapa}
@@ -200,7 +200,7 @@ export default function Empresa(){
                         <div style={{fontSize:30}}>{location.state.nombre}</div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                            <Rating style={{fontSize:50}} value={location.state.puntuacion}/>
+                            <Rating style={{fontSize:50}} value={location.state.puntuacion} readOnly/>
                             <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:50}}/></Button>
                             <Dialog
                                 open={openCompartir}
@@ -251,7 +251,7 @@ export default function Empresa(){
 
                 <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
-                        <CheckCircleIcon style={{color:"#F2DC9B",fontSize:35}}></CheckCircleIcon> <div style={{color:"white",fontSize:30}}>Caracteristicas</div>
+                      <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
                     </div>
                     <div style={{display:"flex", flexDirection:"row", boxSizing:"border-box", minWidth:"100%", minHeight:"60%", padding:"10px"}}>
                     <Box sx={{ flexGrow: 1 }}>

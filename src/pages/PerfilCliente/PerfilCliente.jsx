@@ -19,6 +19,11 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dropdown from 'react-bootstrap/Dropdown';
 import {useState, useEffect} from 'react';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 
 //import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -28,6 +33,19 @@ import {useState, useEffect} from 'react';
 import './PerfilCliente.css';
 
 export default function Share(){
+
+
+    const [openComentar, setOpenComentar] = React.useState(false);
+
+    const handleClickOpenComentar = () => {
+        setOpenComentar(true);
+    };
+
+    const handleCloseComentar = () => {
+        setOpenComentar(false);
+    };
+
+
 
     const StyledTableCell = styled(TableCell)(({ theme }) => ({
         [`&.${tableCellClasses.head}`]: {
@@ -81,6 +99,7 @@ export default function Share(){
 
     function setComentario (){
         setVisivilidad(true)
+        handleCloseComentar();
     };
     
     return(
@@ -127,10 +146,15 @@ export default function Share(){
                                 ))} 
                             </TableBody>
                         </Table>
-                    </TableContainer>
-                    <br/>
-                    <h2>Dejanos un comentario!</h2>
-                    <Dropdown className="drop">
+                    </TableContainer>      
+                    <Button variant="contained" onClick={handleClickOpenComentar} style={{marginTop:"10px", backgroundColor:"#F7D794", color:"black"}}>Realizar comentario</Button>
+                    <Dialog open={openComentar} onClose={handleCloseComentar}>
+        <DialogTitle>Comentar empresa</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Elige una de las empresas contratadas y escriba un comentario.
+          </DialogContentText>
+          <Dropdown className="drop">
                     <Dropdown.Toggle className="toggle" id="dropdown-basic"  >
                         {texto}
                     </Dropdown.Toggle>
@@ -139,13 +163,23 @@ export default function Share(){
                     <Dropdown.Item onClick={setMudanza2} >{rows[1].empresa + ' ' + rows[1].fecha}</Dropdown.Item>
                     <Dropdown.Item onClick={setMudanza3} >{rows[2].empresa + ' ' + rows[2].fecha}</Dropdown.Item>
                     </Dropdown.Menu>
-                    </Dropdown>                   
-                    <br/>
-                    <br/>
-                    <br/>
-                    <TextField fullWidth label="escribe aqui tu comentario" id="fullWidth" onChange={handleSummit} />     
-                    <br/>            
-                    <Button variant="contained" onClick={setComentario}>Comenta</Button>
+                    </Dropdown> 
+          <TextField
+            autoFocus
+            margin="dense"
+            id="comentario"
+            label="Comentario"
+            type="comment"
+            fullWidth
+            variant="standard"
+            onChange={handleSummit}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={setComentario}>Comentar</Button>
+          <Button onClick={handleCloseComentar}>Cancelar</Button>
+        </DialogActions>
+      </Dialog>
                     <br/>  
                     {visibilidad == true && 
                     <Comentario usuario={texto} texto={texto2} puntuacion={5}/>}
