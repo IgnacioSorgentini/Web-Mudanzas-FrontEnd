@@ -74,6 +74,7 @@ div .contenedor-icon{
     justify-content:flex-start;
     box-shadow: 20px 20px 10px grey;
     padding: 20px;
+    overflow-x: scroll;
 }
 
 .contenedor-mudanzas h1{
@@ -97,6 +98,12 @@ div .contenedor-icon{
     box-sizing: border-box;
     background-color: #A6836F;
     margin-left: 5px;
+}
+
+.contenedor-mi-tabla{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: auto;
 }
 
 

@@ -23,7 +23,7 @@ export default function Home(){
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
-          <div style={{display:"flex", justifyContent:"space-between",flexDirection:"row", borderRadius:"0px 0px 7px 7px",marginLeft:"20px", marginRight:"20px", }}>
+          <div style={{display:"flex", justifyContent:"space-between",flexDirection:"row", borderRadius:"0px 0px 7px 7px",marginLeft:"0px", marginRight:"0px", }}>
             <div style={{display:"flex", flexDirection:"row", backgroundColor:"#A6836F", borderRadius:"0px 0px 7px 7px"}}>
             <div style={{display:'flex'}}>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
