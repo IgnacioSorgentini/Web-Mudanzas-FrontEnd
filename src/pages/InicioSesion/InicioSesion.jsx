@@ -21,8 +21,11 @@ function InicioSesion(props){
     const [error,setError] = useState(1)
 
 
-    const userValido='pedroseveri@gmail.com'
+    const userValido='usuario@gmail.com'
     const pwValida= '123'
+
+    const userValido2='oferente@gmail.com'
+    const pwValida2= '123'
     
     const handleUserChange = (e) => {
     	setUser(e.target.value);
@@ -33,7 +36,7 @@ function InicioSesion(props){
   	};
 
     function comprobarUsuario () {
-        if (userValido === user && pwValida === password ){
+        if ((userValido === user && pwValida === password) || (userValido2 === user && pwValida2 === password) ){
             setValidar(0)
         }
         else{
@@ -62,9 +65,9 @@ function InicioSesion(props){
                     {error == 0 && <Alert variant="filled" severity="error">Los datos ingresados no son correctos</Alert>}
                     <br/>
                     <div className="caja-botones">
-                        <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794"}} onClick={comprobarUsuario}>
-                        <Link to="/HomeOferente" style={{textDecoration:'none',color:'black'}}>Ingr</Link>
-                        <Link to="/HomeCliente" style={{textDecoration:'none',color:'black'}}>esar</Link>
+
+                        <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={comprobarUsuario}>
+                            ingresar
                         </button>
                         <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
                             Cancelar
@@ -75,6 +78,14 @@ function InicioSesion(props){
             </div>
         </div>
     ) : "";
+    }
+    else{
+        if (user == userValido){
+            window.location.replace("/HomeCliente")
+        }
+        else{
+            window.location.replace("/HomeOferente")
+        }
     }
 }
 
