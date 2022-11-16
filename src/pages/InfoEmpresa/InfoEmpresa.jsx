@@ -46,32 +46,44 @@ import { Mail } from '@mui/icons-material';
 
 const marks = [
     {
-      value: 50,
-      label: '50km',
+      value: 10,
+      label: '10km',
+    },
+    {
+      value: 20,
+      label: '20km',
+    },
+    {
+      value: 30,
+      label: '30km',
+    },
+    {
+      value: 40,
+      label: '40km',
+    },
+    {
+        value: 50,
+        label: '50km'
+    },
+    {
+        value: 60,
+        label: '60km'
+    },
+    {
+        value: 70,
+        label: '70km'
+    },
+    {
+      value: 80,
+      label: '80km'
+    },
+    {
+      value: 90,
+      label: '90km'
     },
     {
       value: 100,
-      label: '100km',
-    },
-    {
-      value: 150,
-      label: '150km',
-    },
-    {
-      value: 200,
-      label: '200km',
-    },
-    {
-        value: 250,
-        label: '250km'
-    },
-    {
-        value: 300,
-        label: '300km'
-    },
-    {
-        value: 350,
-        label: '350km'
+      label: '100km'
     },
   ];
 
@@ -120,7 +132,7 @@ export default function Empresa(){
                     size="small"
                     startAdornment={<InputAdornment position="start">$</InputAdornment>}
                 />
-                <Slider defaultValue={0} aria-label="Default" valueLabelDisplay="auto" min={0} max={400} step={5} marks={marks}  onChange={handleSliderChange} aria-labelledby="input-slider" />
+                <Slider defaultValue={0} aria-label="Default" valueLabelDisplay="auto" min={0} max={100} step={0.5} marks={marks}  onChange={handleSliderChange} aria-labelledby="input-slider" />
             </div>
         </div>
         </Box>
