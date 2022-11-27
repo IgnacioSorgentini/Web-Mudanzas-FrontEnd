@@ -24,7 +24,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-
+import RecommendIcon from '@mui/icons-material/Recommend';
+import Tooltip from '@mui/material/Tooltip';
 
 //import LocationOnIcon from '@mui/icons-material/LocationOn';
 //import ShareIcon from '@mui/icons-material/Share';
@@ -36,13 +37,20 @@ export default function Share(){
 
 
     const [openComentar, setOpenComentar] = React.useState(false);
-
     const handleClickOpenComentar = () => {
         setOpenComentar(true);
     };
-
     const handleCloseComentar = () => {
         setOpenComentar(false);
+    };
+
+
+    const [openValorar, setOpenValorar] = React.useState(false);
+    const handleClickOpenValorar = () => {
+      setOpenValorar(true);
+    };
+    const handleCloseValorar = () => {
+      setOpenValorar(false);
     };
 
 
@@ -72,9 +80,9 @@ export default function Share(){
       }
 
       const rows = [
-        createData('Mudate con Cristian', '24/05/2019', 'Finalizada',<Rating value ={5}></Rating>),
-        createData('Mudate con Cristian', '07/10/2020', 'Finalizada',<Rating value ={5}></Rating>),
-        createData('Mudanzas Ivana & co.', '15/06/2022', 'Finalizada', <Rating value ={5}></Rating>),
+        createData('Mudate con Cristian', '24/05/2019', 'Finalizada',<Rating value ={0} readOnly></Rating>),
+        createData('Mudate con Cristian', '07/10/2020', 'Finalizada',<Rating value ={0} readOnly></Rating>),
+        createData('Mudanzas Ivana & co.', '15/06/2022', 'Finalizada', <Rating value ={0} readOnly></Rating>),
       ];
 
       const [texto,setTexto] = useState('elegi la mudanza')
@@ -141,12 +149,38 @@ export default function Share(){
                                     </StyledTableCell>
                                     <StyledTableCell align="right">{row.fecha}</StyledTableCell>
                                     <StyledTableCell align="right">{row.estado}</StyledTableCell>
-                                    <StyledTableCell align="right">{row.puntuacion}</StyledTableCell>
+                                    <StyledTableCell align="right">{row.puntuacion}<Tooltip title="Valorar"><Button onClick={handleClickOpenValorar}><RecommendIcon style={{color:"5B5772"}}></RecommendIcon></Button></Tooltip></StyledTableCell>
                                     </StyledTableRow>
                                 ))} 
                             </TableBody>
                         </Table>
-                    </TableContainer>      
+                    </TableContainer>
+                    <Dialog open={openValorar} onClose={handleCloseValorar}>
+                      <DialogTitle>Valorar contratacion</DialogTitle>
+                      <DialogContent>
+                        <DialogContentText>
+                          Inserte una valoración mediante estrellas aquí debajo. También puede emitir un comentario si lo desea.
+                        </DialogContentText>
+                        <div style={{minWidth:"100%", display:"flex", justifyContent:"center", marginTop:"20px"}}>
+                          <Rating></Rating>
+                        </div>
+                        <div>
+                        <TextField
+                          autoFocus
+                          margin="dense"
+                          id="comentario"
+                          label="Comentario"
+                          type="Comentario"
+                          fullWidth
+                          variant="standard"
+                        />
+                        </div>
+                      </DialogContent>
+                      <DialogActions>
+                        <Button onClick={handleCloseValorar}>Cancelar</Button>
+                        <Button onClick={handleCloseValorar}>Confirmar</Button>
+                      </DialogActions>
+                    </Dialog>
                     <Button variant="contained" onClick={handleClickOpenComentar} style={{marginTop:"10px", backgroundColor:"#F7D794", color:"black"}}>Realizar comentario</Button>
                     <Dialog open={openComentar} onClose={handleCloseComentar}>
         <DialogTitle>Comentar empresa</DialogTitle>

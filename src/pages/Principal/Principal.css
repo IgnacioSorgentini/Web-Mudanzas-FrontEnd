@@ -31,11 +31,15 @@ h1{
 
 .app-titulo{
     margin-left: 15px;
+    font-family: Sarabun, 'SemiBold 600';
+    font-size: 48px;
 }
 
 .app-descripcion{
     margin-top: 10px;
     margin-left: 15px;
+    font-family: Sarabun, 'ExtraLight 200';
+    font-size: 17px;
 }
 
 .app-botones{
@@ -45,6 +49,7 @@ h1{
     justify-content: space-evenly;
     align-items: center;
     height: 50%;
+    font-family: Sarabun, 'Thin 100';
 }
 
 .spikes {

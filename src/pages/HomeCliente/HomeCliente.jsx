@@ -30,13 +30,11 @@ export default function Home(){
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
                   <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
                   <Select >
-                    <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
-                      <Rating name="read-only" value={1}  readOnly/>
-                      <Rating name="read-only" value={2} readOnly />
-                      <Rating name="read-only" value={3} readOnly />
-                      <Rating name="read-only" value={4}  readOnly/>
-                      <Rating name="read-only" value={5}  readOnly/>
-                    </div>
+                      <MenuItem value={10}><Rating name="read-only" value={1} size="small"  readOnly/></MenuItem>
+                      <MenuItem value={20}><Rating name="read-only" value={2} size="small" readOnly /></MenuItem>
+                      <MenuItem value={30}><Rating name="read-only" value={3} size="small" readOnly /></MenuItem>
+                      <MenuItem value={40}><Rating name="read-only" value={4} size="small"  readOnly/></MenuItem>
+                      <MenuItem value={50}><Rating name="read-only" value={5} size="small"  readOnly/></MenuItem>
                   </Select>
               </FormControl>
             </div>
