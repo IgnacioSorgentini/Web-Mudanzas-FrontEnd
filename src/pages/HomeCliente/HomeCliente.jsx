@@ -23,8 +23,8 @@ export default function Home(){
     return(
         <div style={{display:"flex", backgroundColor:"#D9D9D9",flex:1,flexDirection:"column"}}>
           <MenuCliente />
-          <div style={{display:"flex", justifyContent:"space-between",flexDirection:"row", borderRadius:"0px 0px 7px 7px",marginLeft:"0px", marginRight:"0px", }}>
-            <div style={{display:"flex", flexDirection:"row", backgroundColor:"#5B5772", borderRadius:"0px 0px 7px 7px"}}>
+          <div style={{display:"flex", justifyContent:"space-between",flexDirection:"column", borderRadius:"0px 0px 7px 7px",marginLeft:"0px", marginRight:"0px", }}>
+            <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between", backgroundColor:"#5B5772", borderRadius:"0px 0px 7px 7px"}}>
 
             <div style={{display:'flex'}}>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
@@ -76,13 +76,14 @@ export default function Home(){
                   </Select>
               </FormControl>
             </div>
-            </div>
-            <div style={{backgroundColor:"#5B5772", display:"flex", boxSizing:"border-box", paddingLeft:"10px", paddingRight:"10px", paddingTop:"6px", paddingBottom:"10px", borderRadius:"0px 0px 7px 7px"}}>
-              <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:40, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
+            <div style={{ paddingLeft:"10px", paddingRight:"10px", paddingTop:"6px", paddingBottom:"10px"}}>
+              <Box style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:40, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
                 <SearchIcon />
                 <Input placeholder="Buscar Empresa" />
               </Box>
             </div>
+            </div>
+            
           </div>
             <div className="contenedor-empresas" style={{display:"flex", flexDirection:"row", flexWrap: "wrap", justifyContent: "center", marginTop:"20px"}}>
               <Link to="/Empresa" style={{textDecoration:'none'}} state={{nombre:"Gabriel Mudanzas",ubicacion:"CABA, Buenos Aires",puntuacion:3,telefono:"4245-6598",direccion:"Independencia 701",mail:"gabriel@mudanzas.com",descripcion:"somos una empresa de familia que se preocupa por la satisfaccion del cliente",precioXKm:100}}><Empresa nombre="Gabriel Mudanzas" puntuacion={3} ubicacion="CABA, Buenos Aires" precioXKm={100} /></Link>
@@ -96,3 +97,9 @@ export default function Home(){
         </div>
     );
 }
+{/* <div style={{backgroundColor:"#5B5772", display:"flex", boxSizing:"border-box", paddingLeft:"10px", paddingRight:"10px", paddingTop:"6px", paddingBottom:"10px", borderRadius:"0px 0px 7px 7px"}}>
+              <Box  style={{display:"flex", backgroundColor:"#F2DC9B", width:250, height:40, borderRadius:"50px", alignItems:"center", flexDirection:"row", paddingLeft:"5px" }}>
+                <SearchIcon />
+                <Input placeholder="Buscar Empresa" />
+              </Box>
+</div> */}
