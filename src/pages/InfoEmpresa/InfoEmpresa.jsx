@@ -43,6 +43,60 @@ import Avatar from '@mui/material/Avatar';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Mail } from '@mui/icons-material';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
+
+
+
+const estiloSimulador = styled(Slider)(({ theme }) => ({
+  color: theme.palette.mode === 'dark' ? '#3880ff' : '#3880ff',
+
+}));
+
+
+
+const PrettoSlider = styled(Slider)({
+  color: 'BLACK',
+  height: 8,
+  '& .MuiSlider-track': {
+    border: 'none',
+  },
+  '& .MuiSlider-thumb': {
+    height: 24,
+    width: 24,
+    backgroundColor: '#fff',
+    border: '2px solid currentColor',
+    '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
+      boxShadow: 'inherit',
+    },
+    '&:before': {
+      display: 'none',
+    },
+  },
+  '& .MuiSlider-valueLabel': {
+    lineHeight: 1.2,
+    fontSize: 12,
+    background: 'unset',
+    padding: 0,
+    width: 32,
+    height: 32,
+    borderRadius: '50% 50% 50% 0',
+    backgroundColor: 'BLACK',
+    transformOrigin: 'bottom left',
+    transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
+    '&:before': { display: 'none' },
+    '&.MuiSlider-valueLabelOpen': {
+      transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
+    },
+    '& > *': {
+      transform: 'rotate(45deg)',
+    },
+  },
+});
+
 
 const marks = [
     {
@@ -89,6 +143,8 @@ const marks = [
 
 
 export default function Empresa(){
+
+
     const location = useLocation()
     const { from } = location.state
 
@@ -112,16 +168,16 @@ export default function Empresa(){
     };
     const list = () => (
         <Box
-          sx={{ width: 'auto'}}
+          sx={{ width: 'auto', backgroundColor:'#CCCCCC'}}
           role="presentation"
           onKeyDown={toggleDrawer('bottom', false)}
         >
-        <div style={{padding:"5%"}}>
+        <div style={{padding:"5%", color:"black"}}>
             <div>
                 <h3>Simulador de costos</h3>
             </div>
             <div>
-                <p>Deslize la barra segun la cantidad de kilometros y observe cambiar el precio final</p>
+                <p>Deslize la barra segun la cantidad de kilometros y observe cambiar el precio final.</p>
             </div>
             <div>
 
@@ -131,8 +187,12 @@ export default function Empresa(){
                     value={valueSimulador * location.state.precioXKm}
                     size="small"
                     startAdornment={<InputAdornment position="start">$</InputAdornment>}
+                    sx = {{backgroundColor:"#E0E0E0"}}
                 />
-                <Slider defaultValue={0} aria-label="Default" valueLabelDisplay="auto" min={0} max={100} step={0.5} marks={marks}  onChange={handleSliderChange} aria-labelledby="input-slider" />
+                <br/>
+                <br/>
+                <br/>
+                <PrettoSlider defaultValue={0} aria-label="Default" valueLabelDisplay="auto" min={0} max={100} step={0.5} marks={marks}  onChange={handleSliderChange} aria-labelledby="input-slider" />
             </div>
         </div>
         </Box>
@@ -148,7 +208,7 @@ export default function Empresa(){
 
 
 
-
+      
 
 
 
@@ -163,6 +223,13 @@ export default function Empresa(){
       const handleCloseContratar = () => {
         setOpenContratar(false);
       };
+
+
+      const [medioDePago, setMedioDePago] = React.useState('');
+      const handleChangeMedioDePago = (event) => {
+        setMedioDePago(event.target.value);
+      };
+
 
 
 
@@ -309,6 +376,23 @@ export default function Empresa(){
                                         Ingrese su numero de telefono para que la empresa pueda contactarse con usted
                                     </DialogContentText>
                                     <TextField label="Numero de telefono" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
+                                    <br/>
+                                    <br/>
+                                    <DialogContentText>Elija un medio de pago</DialogContentText>
+                                    <FormControl fullWidth>
+                                      <InputLabel id="demo-simple-select-label">Medio de pago</InputLabel>
+                                      <Select
+                                        labelId="demo-simple-select-label"
+                                        id="demo-simple-select"
+                                        value={medioDePago}
+                                        label="Medio de pago"
+                                        onChange={handleChangeMedioDePago}
+                                      >
+                                        <MenuItem value={10}>MedioDePago1</MenuItem>
+                                        <MenuItem value={20}>MedioDePago2</MenuItem>
+                                        <MenuItem value={30}>MedioDePago3</MenuItem>
+                                      </Select>
+                                    </FormControl>
                                 </DialogContent>
                                 <DialogActions>
                                     <Button autoFocus onClick={handleCloseContratar}>

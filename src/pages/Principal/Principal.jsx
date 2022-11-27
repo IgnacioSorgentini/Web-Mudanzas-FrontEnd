@@ -25,7 +25,7 @@ function App() {
               <h1 style={{color:"#1B2430"}}>MeMudo!</h1>
             </div>
             <div className="app-descripcion" style={{color:"#1B2430"}}>
-              Bienvenido a MeMudo! Aquí usted podrá contratar y también ofrecer servicios para el transporte en las mudanzas. Ingrese ya sea como cliente u oferente y disfrute de la experiencia.  
+              Bienvenido a <b>MeMudo!</b> Aquí usted podrá contratar y también ofrecer servicios para el transporte en las mudanzas. Además, podrá sacar provecho de nuestro <b>simulador de costos</b>. Ingrese ya sea como cliente u oferente y disfrute de la experiencia.  
             </div>
           </section>
           <div className="app-botones">
