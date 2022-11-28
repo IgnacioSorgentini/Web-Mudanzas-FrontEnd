@@ -18,6 +18,7 @@ import Empresa from '../../components/Empresa/Empresa';
 import { Link } from 'react-router-dom';
 import MenuCliente from '../../components/Menu/MenuCliente';
 import { BorderColor, BorderStyle } from '@mui/icons-material';
+import ListSubheader from '@mui/material/ListSubheader';
 
 export default function Home(){
     return(
@@ -61,14 +62,23 @@ export default function Home(){
             </div>
             <div>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
-                  <InputLabel id="demo-simple-select-label">Servicios</InputLabel>
+                  <InputLabel id="demo-simple-select-label">Caracteristicas</InputLabel>
                   <Select>
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
                     <FormGroup>
-                      <FormControlLabel control={<Checkbox defaultChecked />} label="Transporte" />
-                      <FormControlLabel control={<Checkbox defaultChecked />} label="Descenso de pertenencias" />
-                      <FormControlLabel control={<Checkbox defaultChecked />} label="Embalaje" />
-                      <FormControlLabel control={<Checkbox defaultChecked />} label="Guardado de pertenencias" />
+                    <optgroup label="Transporte"></optgroup>
+                      <FormControlLabel control={<Checkbox />} label="Transporte de muebles pesados" />
+                      <FormControlLabel control={<Checkbox />} label="Transporte de objetos fragiles" />
+                      <FormControlLabel control={<Checkbox />} label="Mudanza compartida" />
+                      
+                      <optgroup label="Experiencia"></optgroup>
+                      <FormControlLabel control={<Checkbox />} label="+ 1 año de experiencia" />
+                      <FormControlLabel control={<Checkbox />} label="+ 5 años de experiencia" />
+                      <FormControlLabel control={<Checkbox />} label="+ 10 años de experiencia" />
+                      <optgroup label="Otros"></optgroup>
+                      <FormControlLabel control={<Checkbox  />} label="Descenso de pertenencias" />
+                      <FormControlLabel control={<Checkbox  />} label="Embalaje" />
+                      <FormControlLabel control={<Checkbox  />} label="Guardado de pertenencias" />
                     </FormGroup>
                     </div>
                   </Select>
