@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../../Fuentes.css';
 import Comentario from '../../components/Comentario/Comentario';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -181,9 +182,9 @@ export default function Empresa(){
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
                         />
                         
-                        <div style={{fontSize:30}}>Nombre empresa</div>
+                        <div><h2>Nombre empresa</h2></div>
                         <div style={{alignItems:"center", marginTop:"10px", marginBottom:"5px"}}>
-                            <Chip icon={<LocationOnIcon/>} label="Localidad" />
+                            <Chip icon={<LocationOnIcon/>} label={<h6>Localidad</h6>} />
                         </div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
@@ -194,36 +195,36 @@ export default function Empresa(){
 
                 <div style={{display:"flex",borderRadius:"10px",backgroundColor:"#5B5772",flexDirection:"column",marginTop:"20px", marginBottom:"20px", marginLeft:"20px", alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
-                      <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
+                      <div style={{color:"white", paddingLeft:"10px"}}><h3>Caracteristicas</h3></div>
                     </div>
                     <div style={{display:"flex", flexDirection:"row", boxSizing:"border-box", minWidth:"100%", minHeight:"60%", padding:"10px"}}>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={3}>
                                 <Grid item xs={8}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Embalaje incluido</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Embalaje incluido</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Un unico transporte</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Un unico transporte</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Personal calificado</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Personal calificado</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Incluimos guardado de pertenencias</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Incluimos guardado de pertenencias</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 5</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Caracteristica 5</h6></Item>
                                 </Grid>
                                 <Grid item xs="auto">
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Caracteristica 3</h6></Item>
                                 </Grid>
                                 <Grid item xs= {8}>
-                                    <Item style={{backgroundColor:"#D9D9D9"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9"}}><h6>Caracteristica 3</h6></Item>
                                 </Grid>
                             </Grid>
                         </Box>
                     </div>
-                    <div style={{display:"flex",minWidth:"100%", minHeight:"20%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<EditIcon />} onClick={handleClickOpenEditar}>Editar</Button></div>
+                    <div style={{display:"flex",minWidth:"100%", minHeight:"20%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<EditIcon />} onClick={handleClickOpenEditar}><h5>Editar</h5></Button></div>
                     <Dialog open={openEditar} onClose={handleCloseEditar} maxWidth="sm">
                         <DialogTitle>Editar informacion de la empresa</DialogTitle>
                         <DialogContent>
@@ -341,7 +342,7 @@ export default function Empresa(){
                 </div>
             </div>
             <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"10px",color:"white",fontSize:40}} >
-                Descripcion de la empresa
+                <h3>Descripcion de la empresa</h3>
             </div>
             <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",alignItems:"center", marginLeft:"30px", width:"90vw", margin:"20px", justifyContent:"space-between"}}>
                 <Comentario usuario="Pedro Severi" texto="Excelente servicio!" puntuacion={5}/>
@@ -352,9 +353,9 @@ export default function Empresa(){
                 <Comentario usuario="Franco Vercesi" texto="Me sorprende ver tantos comentarios positivos. En mi caso no fue una experiencia tan amena. Quizás no era su día." puntuacion={2}/>
             </div>
             <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"10px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
-                <div><PhoneIcon/>Telefono</div>
-                <div><HomeIcon/>Direccion</div>
-                <div><MailIcon/>Mail</div>
+                <div style={{display:"flex", flexDirection:"row"}}><PhoneIcon/><h5>Telefono</h5></div>
+                <div style={{display:"flex", flexDirection:"row"}}><HomeIcon/><h5>Direccion</h5></div>
+                <div style={{display:"flex", flexDirection:"row"}}><MailIcon/><h5>Mail</h5></div>
             </div>
 
         </div>

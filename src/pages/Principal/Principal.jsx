@@ -1,5 +1,6 @@
 import './Principal.css';
 import {useState} from 'react';
+import '../../Fuentes.css';
 import InicioSesion from '../InicioSesion/InicioSesion';
 import Registro from '../Registro/Registro';
 import RecuperacionContraseña from '../RecuperacionContraseña/RecuperacionContraseña';
@@ -25,15 +26,15 @@ function App() {
               <h1 style={{color:"#1B2430"}}>MeMudo!</h1>
             </div>
             <div className="app-descripcion" style={{color:"#1B2430"}}>
-              Bienvenido a <b>MeMudo!</b> Aquí usted podrá contratar y también ofrecer servicios para el transporte en las mudanzas. Además, podrá sacar provecho de nuestro <b>simulador de costos</b>. Ingrese ya sea como cliente u oferente y disfrute de la experiencia.  
+              <h6>Bienvenido a <b>MeMudo!</b> Aquí usted podrá contratar y también ofrecer servicios para el transporte en las mudanzas. Además, podrá sacar provecho de nuestro <b>simulador de costos</b>. Ingrese ya sea como cliente u oferente y disfrute de la experiencia.</h6>  
             </div>
           </section>
           <div className="app-botones">
             <div style={{minWidth:"50%"}}>
-              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => setButtonPopupIniciarSesion(true)}>Iniciar sesion</button>
+              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => setButtonPopupIniciarSesion(true)}><h5>Iniciar sesion</h5></button>
             </div>
             <div style={{minWidth:"50%"}}>
-              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => setButtonPopupRegistrarse(true)}>Registrarse</button>
+              <button type="button" class="btn btn-lg btn-block w-100" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => setButtonPopupRegistrarse(true)}><h5>Registrarse</h5></button>
             </div>
           </div>
       </div>

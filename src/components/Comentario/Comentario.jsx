@@ -1,4 +1,5 @@
 import React from "react";
+import '../../Fuentes.css';
 import './Comentario.css';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Rating from '@mui/material/Rating';
@@ -44,7 +45,7 @@ function Comentario({usuario, texto, puntuacion}){
                         <Avatar {...stringAvatar(`${usuario}`)} />
                     </div>
                     <div style={{display:"flex", boxSizing:"border-box", paddingTop:"5px", marginLeft:"10px"}}>
-                        <p style={{color:"white"}}>{usuario}</p>
+                        <h5 style={{color:"white"}}>{usuario}</h5>
                     </div>
                 </div>
                 <div>
@@ -52,7 +53,7 @@ function Comentario({usuario, texto, puntuacion}){
                 </div>
            </div>
             <div>
-                <p style={{color:"white"}}>{texto}</p>
+                <h6 style={{color:"white"}}>{texto}</h6>
             </div>
         </div>
     )

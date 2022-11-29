@@ -1,4 +1,5 @@
 import React from "react";
+import '../../Fuentes.css';
 import {useState, useEffect} from 'react';
 import TextField from '@mui/material/TextField';
 import Alert from '@mui/material/Alert';
@@ -55,22 +56,22 @@ function InicioSesion(props){
         <div className="popup">
             <div className="popup-inner">
                 <div className="caja-titulo">
-                    <h2 className="title"> Inicio de sesión </h2>
+                    <h2 className="titulo-inicio-sesion"> Inicio de sesión </h2>
                 </div>
                 <div className="caja-contenido">
                     <TextField id="outlined-basic" label="Mail" variant="outlined" margin="normal" onChange={handleUserChange} fullWidth />
                     <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" margin="normal" onChange={handlePasswordChange} onKeyDown={comprobarUsuarioConEnter} fullWidth />
-                    <a  className="vinculo" href="#" onClick={() => setButtonPopupRecuperarContraseña(true)}>¿Olvidaste tu contraseña?</a> 
+                    <a  className="vinculo" href="#" onClick={() => setButtonPopupRecuperarContraseña(true)}><h6>¿Olvidaste tu contraseña?</h6></a> 
                     <br/>
-                    {error == 0 && <Alert variant="filled" severity="error">Los datos ingresados no son correctos</Alert>}
+                    {error == 0 && <Alert variant="filled" severity="error"><h6>Los datos ingresados no son correctos</h6></Alert>}
                     <br/>
                     <div className="caja-botones">
 
                         <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={comprobarUsuario}>
-                            Ingresar
+                            <h5>Ingresar</h5>
                         </button>
                         <button className="boton btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
-                            Cancelar
+                            <h5>Cancelar</h5>
                         </button>
                     </div> 
                 </div>

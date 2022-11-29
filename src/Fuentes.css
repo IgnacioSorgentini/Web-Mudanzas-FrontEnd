@@ -1,0 +1,24 @@
+h1{
+    font-family: Sarabun , 'SemiBold 600';
+    font-size: 70px;
+}
+
+h2{
+    font-family: Sarabun, 'ExtraLight 200';
+    font-size: 30px;
+}
+
+h3{
+    font-family: Sarabun, 'ExtraLight 200 Italic';
+    font-size: 30px;
+}
+
+h5{
+    font-family: Sarabun, 'Thin 100 Italic';
+    font-size: 20px;
+}
+
+h6{
+    font-family: Sarabun, 'Thin 100';
+    font-size: 17px;
+}

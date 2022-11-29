@@ -1,4 +1,5 @@
 import React from "react";
+import '../../Fuentes.css';
 import './MisContrataciones.css';
 import MenuOferente from '../../components/Menu/MenuOferente';
 import Contratacion from "../../components/Contratacion/Contratacion";
@@ -62,7 +63,7 @@ function MisContrataciones(){
             <div className="contenedor-contrataciones">
                 <div className="en-proceso">
                     <div className="titulo">
-                        <h3>Mudanzas en proceso</h3>
+                        <h2>Mudanzas en proceso</h2>
                     </div>
                     <div className="lista-mudanzas">
                     <TableContainer component={Paper}>
@@ -89,7 +90,7 @@ function MisContrataciones(){
                 </div>
                 <div className="completadas">
                     <div className="titulo">
-                        <h3>Mudanzas completadas</h3>
+                        <h2>Mudanzas completadas</h2>
                     </div>
                     <div className="lista-mudanzas">
                     <TableContainer component={Paper}>

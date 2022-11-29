@@ -78,13 +78,7 @@ div .contenedor-icon{
 }
 
 .contenedor-mudanzas h1{
-    font-size:30px;
     flex-direction:column;
-    font-weight:bold;
-}
-
-.contenedor-info-perfil h2, .contenedor-info-perfil h3{
-    font-size: 30px;
 }
 
 .contenedor-nombre-mail{

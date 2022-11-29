@@ -27,10 +27,6 @@
 }
 
 .title{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
     line-height: 30px;
     color: black
 }
@@ -38,19 +34,11 @@
 .input{
     width: 80%;
     border-radius: 5px;
-    font-family: 'Poppins';
-    font-style: normal;
 }
 
 .botonCambioPass{
-    padding: 16px 28px;
-    width: 30%;
     border-radius: 10px;
     color: black;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
     height: auto;
     margin-right: 15%;
 }

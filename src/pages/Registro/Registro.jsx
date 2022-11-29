@@ -1,4 +1,5 @@
 import React from "react";
+import '../../Fuentes.css';
 import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -94,10 +95,10 @@ function Registro(props) {
                 <div className="popup-inner">
                     <div className="formRegistro">
                         <div className="titulo-regitro">
-                            <h3 className="titleRegistro"> ¡Create una cuenta! </h3>
+                            <h2 className="titleRegistro"> ¡Create una cuenta! </h2>
                         </div>
                         <div className="contenido-registro">
-                        <text className="texto">Seleccioná tu perfil:</text>
+                        <h5 className="texto">Seleccioná tu perfil:</h5>
                             <Dropdown className="drop">
                                 <Dropdown.Toggle className="toggle" id="dropdown-basic" style={{backgroundColor:"#F7D794"}} >
                                     {texto}
@@ -112,30 +113,30 @@ function Registro(props) {
                                 <div>
                                     <TextField id="outlined-basic" label="Nombre de la empresa" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Mail personal o de la empresa" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
-                                    {error == 2 && <Alert variant="filled" severity="error">El mail indicado ya se encuentra registrado</Alert>}
-                                    {error == 3 && <Alert variant="filled" severity="error">El mail indicado no esta en el formato correcto o se encuentra vacio</Alert>}
+                                    {error == 2 && <Alert variant="filled" severity="error"><h6>El mail indicado ya se encuentra registrado</h6></Alert>}
+                                    {error == 3 && <Alert variant="filled" severity="error"><h6>El mail indicado no esta en el formato correcto o se encuentra vacio</h6></Alert>}
                                     <TextField label="Numero de telefono" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" onChange={handlePasswordChange} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Confirme su contraseña" type="password" autoComplete="current-password" onChange={handleReingresoChange} margin="normal" fullWidth />
-                                    {error == 0 && <Alert variant="filled" severity="error">Las contraseñas no coinciden</Alert>}
-                                    {error == 4 && <Alert variant="filled" severity="error">La contraseña esta vacia</Alert>}
-                                    <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
+                                    {error == 0 && <Alert variant="filled" severity="error"><h6>Las contraseñas no coinciden</h6></Alert>}
+                                    {error == 4 && <Alert variant="filled" severity="error"><h6>La contraseña esta vacia</h6></Alert>}
+                                    <h5 className="texto"> Indique la pregunta secreta y su respuesta: </h5>
                                     <Dropdown className="drop">
                                         <Dropdown.Toggle className="toggle" id="dropdown-basic" style={{backgroundColor:"#F7D794"}} >
                                             {texto2}
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu className="item" style={{backgroundColor:"#F7D794"}}>
-                                            <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} >¿Como se llamaba/llama su primer mascota?</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} ><h5>¿Como se llamaba/llama su primer mascota?</h5></Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}><h5>¿Como se llama la calle donde viviste por primera vez?</h5></Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
                                         <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"#black"}} onClick={verificaciones} >
-                                            Confirmar
+                                            <h5>Confirmar</h5>
                                         </button>
                                         <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"#black"}} onClick={() => props.setTrigger(false)}>
-                                            Cancelar
+                                            <h5>Cancelar</h5>
                                         </button>
                                     </div>
                                 </div>
@@ -145,33 +146,33 @@ function Registro(props) {
                                     <TextField id="outlined-basic" label="Nombre" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Apellido" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Email" variant="outlined" onChange={handleMailChange} margin="normal" fullWidth />
-                                    {error == 2 && <Alert variant="filled" severity="error">El mail indicado ya se encuentra registrado</Alert>}
-                                    {error == 3 && <Alert variant="filled" severity="error">El mail indicado no esta en el formato correcto o se encuentra vacio</Alert>}
+                                    {error == 2 && <Alert variant="filled" severity="error"><h6>El mail indicado ya se encuentra registrado</h6></Alert>}
+                                    {error == 3 && <Alert variant="filled" severity="error"><h6>El mail indicado no esta en el formato correcto o se encuentra vacio</h6></Alert>}
                                     <TextField id="outlined-basic" label="Ciudad" variant="outlined" margin="normal" fullWidth />    
                                     <TextField id="outlined-basic" label="Codigo postal" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Calle" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-basic" label="Numero de calle" variant="outlined" margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Contraseña" type="password" autoComplete="current-password" onChange={handlePasswordChange} margin="normal" fullWidth />
                                     <TextField id="outlined-password-input" label="Confirme su contraseña" type="password" autoComplete="current-password" onChange={handleReingresoChange} margin="normal" fullWidth />
-                                    {error == 0 && <Alert variant="filled" severity="error">Las constraseñas no coinciden</Alert>}
-                                    {error == 4 && <Alert variant="filled" severity="error">La contraseña esta vacia</Alert>}
-                                    <text className="texto"> Indique la pregunta secreta y su respuesta: </text>
+                                    {error == 0 && <Alert variant="filled" severity="error"><h6>Las constraseñas no coinciden</h6></Alert>}
+                                    {error == 4 && <Alert variant="filled" severity="error"><h6>La contraseña esta vacia</h6></Alert>}
+                                    <h6 className="texto"> Indique la pregunta secreta y su respuesta: </h6>
                                     <Dropdown className="drop">
                                         <Dropdown.Toggle className="toggle" id="dropdown-basic" style={{backgroundColor:"#F7D794"}} >
                                             {texto2}
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu className="item" style={{backgroundColor:"#F7D794"}}>
-                                            <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} >¿Como se llamaba/llama su primer mascota?</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}>¿Como se llama la calle donde viviste por primera vez?</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-1" onClick={setPregunta1} onChange={handlePreguntaChange} ><h6>¿Como se llamaba/llama su primer mascota?</h6></Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2" onClick={setPregunta2} onChange={handlePreguntaChange}><h6>¿Como se llama la calle donde viviste por primera vez?</h6></Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
                                     <TextField id="outlined-basic" label="Respuesta" variant="outlined" onChange={handleRespuestaPreguntaChange} margin="normal" fullWidth />
                                     <div className="botones-registro">
                                         <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={verificaciones} >
-                                            Confirmar
+                                            <h5>Confirmar</h5>
                                         </button>
                                         <button className="botonRegistro btn btn-lg" style={{backgroundColor:"#F7D794", color:"black"}} onClick={() => props.setTrigger(false)}>
-                                            Cancelar
+                                            <h5>Cancelar</h5>
                                         </button>
                                     </div>
                                 </div>

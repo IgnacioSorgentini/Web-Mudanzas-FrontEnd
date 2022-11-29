@@ -1,5 +1,6 @@
 import React from "react";
 import './Empresa.css';
+import '../../Fuentes.css';
 import Rating from '@mui/material/Rating';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Chip } from "@mui/material";
@@ -12,10 +13,10 @@ function Empresa({nombre, puntuacion, ubicacion, precioXKm}){
                 <Chip label="Simulador!" color="error" size="small" style={{margin:"5px"}} />
             </div>
             <div className="contenedor-nombre">
-            <Chip icon={<BusinessIcon/>} label={`${nombre}`}/>
+            <Chip icon={<BusinessIcon/>} label={<h6>{nombre}</h6>}/>
             </div>
             <div className="contenedor-ubicacion">
-                <Chip icon={<LocationOnIcon/>} label={`${ubicacion}`}/>
+                <Chip icon={<LocationOnIcon/>} label={<h6>{ubicacion}</h6>}/>
             </div>
             <div className="contenedor-puntuacion">
                 <Rating name="read-only" value={puntuacion}  readOnly/>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../../Fuentes.css';
 import Comentario from '../../components/Comentario/Comentario';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -265,10 +266,10 @@ export default function Empresa(){
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
                         />
                         
-                        <div style={{fontSize:30}}>{location.state.nombre}</div>
+                        <div style={{fontSize:30}}><h2>{location.state.nombre}</h2></div>
                         <div style={{display:"flex"}}>   
                             <div style={{alignItems:"center", marginTop:"10px", marginBottom:"5px"}}>
-                            <Chip icon={<LocationOnIcon/>} label={`${location.state.ubicacion}`} onClick={handleClickOpenMapa} />
+                            <Chip icon={<LocationOnIcon/>} label={<h6>{location.state.ubicacion}</h6>} onClick={handleClickOpenMapa} />
                             <Dialog
                               open={openMapa}
                               onClose={handleCloseMapa}
@@ -332,38 +333,38 @@ export default function Empresa(){
 
                 <div style={{display:"flex",borderRadius:"10px",backgroundColor:"#5B5772",flexDirection:"column", marginTop:"20px", marginBottom:"20px", marginLeft:"20px", alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
-                      <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
+                      <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}><h3>Caracteristicas</h3></div>
                     </div>
                     <div style={{display:"flex", flexDirection:"row", boxSizing:"border-box", minWidth:"100%", minHeight:"60%", padding:"10px"}}>
                     <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={3}>
                                 <Grid item xs={8}>
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 1</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 1</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 2</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 2</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 3</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 4</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 4</h6></Item>
                                 </Grid>
                                 <Grid item xs={4}>
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 5</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 5</h6></Item>
                                 </Grid>
                                 <Grid item xs="auto">
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 6</h6></Item>
                                 </Grid>
                                 <Grid item xs= {8}>
-                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}>Caracteristica 3</Item>
+                                    <Item style={{backgroundColor:"#D9D9D9", color:"black"}}><h6>Caracteristica 7</h6></Item>
                                 </Grid>
                             </Grid>
                         </Box>
                     </div>
                     <div style={{minWidth:"100%", minHeight:"20%", boxSizing:"border-box", display:"flex", flexDirection:"row", justifyContent:"end"}}>
-                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<AttachMoneyIcon />} onClick={toggleDrawer('bottom', true)}>Simular costos</Button></div>
-                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<AddShoppingCartIcon /> } onClick={handleClickOpenContratar}>Contratar</Button></div>
+                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<AttachMoneyIcon />} onClick={toggleDrawer('bottom', true)}><h5>Simular costos</h5></Button></div>
+                        <div style={{display:"flex",minWidth:"20%", minHeight:"10%", justifyContent:"end", alignItems:"center", boxSizing:"border-box", paddingRight:"10px"}}><Button variant="contained" style={{backgroundColor:"#F7D794", color:"black"}} size="large" endIcon={<AddShoppingCartIcon /> } onClick={handleClickOpenContratar}><h5>Contratar</h5></Button></div>
                         <Dialog
                             fullScreen={fullScreen}
                             open={openContratar}
@@ -411,7 +412,7 @@ export default function Empresa(){
             </div>
 
             <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"10px",color:"white",fontSize:40}} >
-            {location.state.descripcion}
+            <h3>{location.state.descripcion}</h3>
             </div>
             <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",alignItems:"center", marginLeft:"30px", width:"90vw", margin:"20px", justifyContent:"space-between"}}>
                 <Comentario usuario="Pedro Severi" texto="Excelente servicio!" puntuacion={5}/>
@@ -422,9 +423,9 @@ export default function Empresa(){
                 <Comentario usuario="Franco Vercesi" texto="Me sorprende ver tantos comentarios positivos. En mi caso no fue una experiencia tan amena. Quizás no era su día." puntuacion={2}/>
             </div>
             <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"10px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
-                <div><PhoneIcon/>{location.state.telefono}</div>
-                <div><HomeIcon/>{location.state.direccion}</div>
-                <div><MailIcon/>{location.state.mail}</div>
+                <div><PhoneIcon/><h5>{location.state.telefono}</h5></div>
+                <div><HomeIcon/><h5>{location.state.direccion}</h5></div>
+                <div><MailIcon/><h5>{location.state.mail}</h5></div>
             </div>
         </div>
 

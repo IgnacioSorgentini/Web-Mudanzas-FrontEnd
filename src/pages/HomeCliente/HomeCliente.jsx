@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../../Fuentes.css';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -29,7 +30,7 @@ export default function Home(){
 
             <div style={{display:'flex'}}>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
-                  <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
+                  <InputLabel  id="demo-simple-select-label"><h5>Calificacion</h5></InputLabel>
                   <Select >
                       <MenuItem value=""><em>Todo</em></MenuItem>
                       <MenuItem value={10}><Rating name="read-only" value={1} size="small"  readOnly/></MenuItem>
@@ -42,7 +43,7 @@ export default function Home(){
             </div>
             <div>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
-                  <InputLabel id="demo-simple-select-label">Zona</InputLabel>
+                  <InputLabel id="demo-simple-select-label"><h5>Zona</h5></InputLabel>
                   <Select
                   >
                       <MenuItem value=""><em>Todo</em></MenuItem>
@@ -54,7 +55,7 @@ export default function Home(){
             </div>
             <div>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
-                <InputLabel id="demo-simple-select-label">Precios</InputLabel>
+                <InputLabel id="demo-simple-select-label"><h5>Precios</h5></InputLabel>
                   <Select>
                     <MenuItem value=""><em>Todo</em></MenuItem>
                     <MenuItem value={10}>1</MenuItem>
@@ -65,7 +66,7 @@ export default function Home(){
             </div>
             <div>
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
-                  <InputLabel id="demo-simple-select-label">Caracteristicas</InputLabel>
+                  <InputLabel id="demo-simple-select-label"><h5>Caracteristicas</h5></InputLabel>
                   <Select>
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
                     <FormGroup>

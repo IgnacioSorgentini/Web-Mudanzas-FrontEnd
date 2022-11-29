@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../../Fuentes.css';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Input from '@mui/material/Input';
@@ -122,14 +123,14 @@ export default function Share(){
                                 <AccountCircleIcon style={{color:"#F2DC9B",fontSize:290}}></AccountCircleIcon>
                             </div>
                             <div className="contenedor-nombre-mail" style={{color:"#D9D9D9"}}>
-                                <h2>James Rodriguez</h2>
-                                <h4>JRodriguez@gmail.com</h4>
+                                <h3>James Rodriguez</h3>
+                                <h3>JRodriguez@gmail.com</h3>
                             </div>
                         </div> 
                     </div>
 
                     <div class="contenedor-mudanzas">
-                        <h1 style={{color:"#D9D9D9"}}>Mis Mudanzas</h1>
+                        <h2 style={{color:"#D9D9D9"}}>Mis Mudanzas</h2>
                         <TableContainer component={Paper}>
                         <Table sx={{ minWidth: 500 }} aria-label="customized table">
                             <TableHead>
