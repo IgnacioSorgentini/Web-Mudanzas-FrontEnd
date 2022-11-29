@@ -188,7 +188,7 @@ export default function Empresa(){
                         </div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                            <Rating name="read-only" value={3} readOnly />
+                            <Rating name="read-only" value={3} style={{color:"#5C5C5C"}} readOnly />
                         </div>
                     </div>
                 </div>

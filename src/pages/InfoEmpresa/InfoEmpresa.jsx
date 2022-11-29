@@ -282,7 +282,7 @@ export default function Empresa(){
                         </div>
                         
                         <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between", alignItems:"center"}}>
-                            <Rating value={location.state.puntuacion} readOnly/>
+                            <Rating value={location.state.puntuacion} style={{color:"#5C5C5C"}} readOnly/>
                             <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:20}}/></Button>
                             <Dialog
                                 open={openCompartir}

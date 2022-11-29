@@ -19,7 +19,7 @@ function Empresa({nombre, puntuacion, ubicacion, precioXKm}){
                 <Chip icon={<LocationOnIcon/>} label={<h6>{ubicacion}</h6>}/>
             </div>
             <div className="contenedor-puntuacion">
-                <Rating name="read-only" value={puntuacion}  readOnly/>
+                <Rating name="read-only" value={puntuacion} style={{color:"#5C5C5C"}}  readOnly/>
             </div>
         </div>
     )
