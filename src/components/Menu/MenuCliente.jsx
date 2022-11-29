@@ -26,7 +26,7 @@ function MenuCliente() {
 
     return(
         <div className="menu">
-            <div style={{display:"flex",backgroundColor:"#8D8D9B",height:"10vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"0px", marginTop:"0px", marginLeft:"0px", marginRight:"0px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
+            <div style={{display:"flex",backgroundColor:"#8D8D9B",height:"13vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"0px", marginTop:"0px", marginLeft:"0px", marginRight:"0px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
 
               <Link to="/HomeCliente" style={{textDecoration:"none"}}>
                 {/* <h1 style={{fontWeight: "bold",color:"#F28D52",fontSize:50}}>MeMudo!</h1> */}

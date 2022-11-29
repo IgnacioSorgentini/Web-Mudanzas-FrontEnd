@@ -26,7 +26,7 @@ function MenuCliente() {
 
     return(
         <div className="menu">
-            <div style={{display:"flex",backgroundColor:"#8D8D9B",height:"10vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"0px",margin:"0px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
+            <div style={{display:"flex",backgroundColor:"#8D8D9B",height:"13vh",flexDirection:"row",justifyContent:"space-between" , borderRadius:"0px",margin:"0px",alignItems:"center", paddingLeft:"10px", paddingRight:"10px"}}>
 
           
               <Link to="/HomeOferente" style={{textDecoration:"none"}}>
