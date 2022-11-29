@@ -37,7 +37,7 @@ function stringAvatar(name) {
 
 function Comentario({usuario, texto, puntuacion}){
     return(
-        <div style={{display:"flex",backgroundColor:"#8D8D9B",width:600,height:200,borderRadius:"5px",margin:"20px", padding:"20px", flexDirection:"column",justifyContent:"start", boxSizing:"border-box"}} >
+        <div style={{display:"flex",backgroundColor:"#8D8D9B",width:600,height:200,borderRadius:"10px",margin:"20px", padding:"20px", flexDirection:"column",justifyContent:"start", boxSizing:"border-box"}} >
            <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between"}}>
                 <div style={{display:"flex", flexDirection:"row", marginBottom:"20px"}}>
                     <div>

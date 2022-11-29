@@ -47,6 +47,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Chip from '@mui/material/Chip';
 
 
 
@@ -258,15 +259,16 @@ export default function Empresa(){
           <MenuCliente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
-                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center", height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"5px" }}>
+                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center", height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"10px" }}>
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"center" }}>
                         <img style={{borderRadius:"5px",height:"35vh",width:"20vw"}}
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
                         />
                         
-                        <div style={{fontSize:20}}>{location.state.nombre}</div>
-                        <div style={{display:"flex"}}> 
-                            <Button onClick={handleClickOpenMapa} style={{color:"black"}}><LocationOnIcon/></Button>
+                        <div style={{fontSize:30}}>{location.state.nombre}</div>
+                        <div style={{display:"flex"}}>   
+                            <div style={{alignItems:"center", marginTop:"10px", marginBottom:"5px"}}>
+                            <Chip icon={<LocationOnIcon/>} label={`${location.state.ubicacion}`} onClick={handleClickOpenMapa} />
                             <Dialog
                               open={openMapa}
                               onClose={handleCloseMapa}
@@ -275,12 +277,12 @@ export default function Empresa(){
                             >
                               <iframe style={{height:"50vh",width:"40vw"}} src="https://maps.google.com/maps?q=Rawson%202343%20Buenos%20Aires&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </Dialog>
-                            <div><p>{location.state.ubicacion}</p></div>
+                            </div>
                         </div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                            <Rating style={{fontSize:30}} value={location.state.puntuacion} readOnly/>
-                            <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:30}}/></Button>
+                            <Rating value={location.state.puntuacion} readOnly/>
+                            <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:20}}/></Button>
                             <Dialog
                                 open={openCompartir}
                                 onClose={handleCloseCompartir}
@@ -328,7 +330,7 @@ export default function Empresa(){
                     </div>
                 </div>
 
-                <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
+                <div style={{display:"flex",borderRadius:"10px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
                       <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
                     </div>
@@ -408,7 +410,7 @@ export default function Empresa(){
 
             </div>
 
-            <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
+            <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"10px",color:"white",fontSize:40}} >
             {location.state.descripcion}
             </div>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
@@ -419,7 +421,7 @@ export default function Empresa(){
                 <Comentario usuario="Gabriel Torres" texto="Despues de Cordanzas, considero que esta es la mejor empresa para hacer una mudanza." puntuacion={4}/>
                 <Comentario usuario="Franco Vercesi" texto="Me sorprende ver tantos comentarios positivos. En mi caso no fue una experiencia tan amena. Quizás no era su día." puntuacion={2}/>
             </div>
-            <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"5px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
+            <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"10px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
                 <div><PhoneIcon/>{location.state.telefono}</div>
                 <div><HomeIcon/>{location.state.direccion}</div>
                 <div><MailIcon/>{location.state.mail}</div>

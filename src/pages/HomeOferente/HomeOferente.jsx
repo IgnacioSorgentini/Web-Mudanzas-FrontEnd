@@ -35,6 +35,7 @@ import Divider from '@mui/material/Divider';
 import InputAdornment from '@mui/material/InputAdornment';
 import { OutlinedInput } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
+import Chip from '@mui/material/Chip';
 
 
 //Estas tres funciones son para la Transfer List que está en la ventana Editar.
@@ -174,7 +175,7 @@ export default function Empresa(){
           <MenuOferente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
-                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center",height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"5px" }}>
+                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center",height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"10px" }}>
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"center" }}>
                         <img style={{borderRadius:"5px",height:"35vh",width:"20vw"}}
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
@@ -182,8 +183,7 @@ export default function Empresa(){
                         
                         <div style={{fontSize:30}}>Nombre empresa</div>
                         <div style={{alignItems:"center", marginTop:"10px", marginBottom:"5px"}}>
-                            <LocationOnIcon/>
-                            Localidad
+                            <Chip icon={<LocationOnIcon/>} label="Localidad"/>
                         </div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
@@ -192,7 +192,7 @@ export default function Empresa(){
                     </div>
                 </div>
 
-                <div style={{display:"flex",borderRadius:"5px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
+                <div style={{display:"flex",borderRadius:"10px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
                       <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
                     </div>
@@ -340,7 +340,7 @@ export default function Empresa(){
                     </Dialog>
                 </div>
             </div>
-            <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"5px",color:"white",fontSize:40}} >
+            <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"10px",color:"white",fontSize:40}} >
                 Descripcion de la empresa
             </div>
             <div style={{display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
@@ -351,7 +351,7 @@ export default function Empresa(){
                 <Comentario usuario="Gabriel Torres" texto="Despues de Cordanzas, considero que esta es la mejor empresa para hacer una mudanza." puntuacion={4}/>
                 <Comentario usuario="Franco Vercesi" texto="Me sorprende ver tantos comentarios positivos. En mi caso no fue una experiencia tan amena. Quizás no era su día." puntuacion={2}/>
             </div>
-            <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"5px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
+            <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"10px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
                 <div><PhoneIcon/>Telefono</div>
                 <div><HomeIcon/>Direccion</div>
                 <div><MailIcon/>Mail</div>
