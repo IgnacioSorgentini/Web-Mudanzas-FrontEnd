@@ -259,7 +259,7 @@ export default function Empresa(){
           <MenuCliente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
-                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center", height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"10px" }}>
+                <div style={{display:"flex",flex:1,marginTop:"20px",flexDirection:"column",alignItems:"center", height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"10px" }}>
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"center" }}>
                         <img style={{borderRadius:"5px",height:"35vh",width:"20vw"}}
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
@@ -330,7 +330,7 @@ export default function Empresa(){
                     </div>
                 </div>
 
-                <div style={{display:"flex",borderRadius:"10px",backgroundColor:"#5B5772",flexDirection:"column",margin:"20px",alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
+                <div style={{display:"flex",borderRadius:"10px",backgroundColor:"#5B5772",flexDirection:"column", marginTop:"20px", marginBottom:"20px", marginLeft:"20px", alignItems:"flex-start",height:"60vh",width:"60vw", boxSizing:"border-box"}}>
                     <div style={{display:"flex", flexDirection:"row", minWidth:"100%", minHeight:"20%"}}>
                       <div style={{color:"white",fontSize:30, paddingLeft:"10px"}}>Caracteristicas</div>
                     </div>
@@ -413,7 +413,7 @@ export default function Empresa(){
             <div style={{display:"flex",margin:"20px",backgroundColor:"#5B5772",justifyContent:"center",alignItems:"center",width:"90vw",height:150,borderRadius:"10px",color:"white",fontSize:40}} >
             {location.state.descripcion}
             </div>
-            <div style={{display:"flex",flexDirection:"row",justifyContent:"flex-start",flexWrap:"wrap",alignItems:"center", marginLeft:"30px"}}>
+            <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",alignItems:"center", marginLeft:"30px", width:"90vw", margin:"20px", justifyContent:"space-between"}}>
                 <Comentario usuario="Pedro Severi" texto="Excelente servicio!" puntuacion={5}/>
                 <Comentario usuario="Cristian Escujuri" texto="Me gustó, aunque no lo elegiría otra vez, creo que hay mejores opciones." puntuacion={4} />
                 <Comentario usuario="Ignacio Sorgentini" texto="Fueron rápidos, eficientes, y muy educados. Recomendadisimo." puntuacion={5}/>
