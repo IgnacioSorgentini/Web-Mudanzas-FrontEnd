@@ -122,7 +122,7 @@ export default function Share(){
                                 <AccountCircleIcon style={{color:"#F2DC9B",fontSize:290}}></AccountCircleIcon>
                             </div>
                             <div className="contenedor-nombre-mail" style={{color:"#D9D9D9"}}>
-                                <h2>James Rodriguez <CreateIcon style={{fontSize:30}}></CreateIcon></h2>
+                                <h2>James Rodriguez</h2>
                                 <h4>JRodriguez@gmail.com</h4>
                             </div>
                         </div> 

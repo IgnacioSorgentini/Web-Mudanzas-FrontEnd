@@ -31,6 +31,7 @@ export default function Home(){
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
                   <InputLabel  id="demo-simple-select-label">Calificacion</InputLabel>
                   <Select >
+                      <MenuItem value=""><em>Todo</em></MenuItem>
                       <MenuItem value={10}><Rating name="read-only" value={1} size="small"  readOnly/></MenuItem>
                       <MenuItem value={20}><Rating name="read-only" value={2} size="small" readOnly /></MenuItem>
                       <MenuItem value={30}><Rating name="read-only" value={3} size="small" readOnly /></MenuItem>
@@ -44,6 +45,7 @@ export default function Home(){
                   <InputLabel id="demo-simple-select-label">Zona</InputLabel>
                   <Select
                   >
+                      <MenuItem value=""><em>Todo</em></MenuItem>
                       <MenuItem value={10}>1</MenuItem>
                       <MenuItem value={20}>2</MenuItem>
                       <MenuItem value={30}>3</MenuItem>
@@ -54,6 +56,7 @@ export default function Home(){
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
                 <InputLabel id="demo-simple-select-label">Precios</InputLabel>
                   <Select>
+                    <MenuItem value=""><em>Todo</em></MenuItem>
                     <MenuItem value={10}>1</MenuItem>
                     <MenuItem value={20}>2</MenuItem>
                     <MenuItem value={30}>3</MenuItem>
