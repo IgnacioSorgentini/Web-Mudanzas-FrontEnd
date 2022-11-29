@@ -174,16 +174,17 @@ export default function Empresa(){
           <MenuOferente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
-                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center",height:"60vh",width:"40vw" }}>
-                    <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"flex-start" }}>
+                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center",height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"5px" }}>
+                    <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"center" }}>
                         <img style={{borderRadius:"5px",height:"35vh",width:"20vw"}}
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
                         />
-                        <div style={{alignItems:"center", marginTop:"10px"}}>
+                        
+                        <div style={{fontSize:30}}>Nombre empresa</div>
+                        <div style={{alignItems:"center", marginTop:"10px", marginBottom:"5px"}}>
                             <LocationOnIcon/>
                             Localidad
                         </div>
-                        <div style={{fontSize:30}}>Nombre empresa</div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
                             <Rating name="read-only" value={3} readOnly />

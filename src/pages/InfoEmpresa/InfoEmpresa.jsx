@@ -258,13 +258,14 @@ export default function Empresa(){
           <MenuCliente />
         <div style={{display:"flex",flex:9,flexDirection:"column",alignItems:"center"}}>
             <div style={{display:"flex",flexDirection:"row",margin:"20px",width:"90vw"}}>
-                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center",height:"60vh",width:"40vw" }}>
-                    <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"flex-start" }}>
+                <div style={{display:"flex",flex:1,margin:"20px",flexDirection:"column",alignItems:"center", height:"60vh",width:"40vw", backgroundColor:"#ADADAD", borderRadius:"5px" }}>
+                    <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"center" }}>
                         <img style={{borderRadius:"5px",height:"35vh",width:"20vw"}}
                         src="https://muchosnegociosrentables.com/wp-content/uploads/2020/09/como-crear-una-empresa-de-mudanzas.jpg"
                         />
-                        <div style={{alignItems:"center"}}>
-                            
+                        
+                        <div style={{fontSize:20}}>{location.state.nombre}</div>
+                        <div style={{display:"flex"}}> 
                             <Button onClick={handleClickOpenMapa} style={{color:"black"}}><LocationOnIcon/></Button>
                             <Dialog
                               open={openMapa}
@@ -274,13 +275,12 @@ export default function Empresa(){
                             >
                               <iframe style={{height:"50vh",width:"40vw"}} src="https://maps.google.com/maps?q=Rawson%202343%20Buenos%20Aires&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                             </Dialog>
-                            {location.state.ubicacion}
+                            <div><p>{location.state.ubicacion}</p></div>
                         </div>
-                        <div style={{fontSize:30}}>{location.state.nombre}</div>
                         
                         <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-                            <Rating style={{fontSize:50}} value={location.state.puntuacion} readOnly/>
-                            <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:50}}/></Button>
+                            <Rating style={{fontSize:30}} value={location.state.puntuacion} readOnly/>
+                            <Button style={{color:"black"}} onClick={handleClickOpenCompartir}><ShareIcon style={{fontSize:30}}/></Button>
                             <Dialog
                                 open={openCompartir}
                                 onClose={handleCloseCompartir}
