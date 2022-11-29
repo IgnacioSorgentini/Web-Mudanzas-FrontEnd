@@ -423,9 +423,9 @@ export default function Empresa(){
                 <Comentario usuario="Franco Vercesi" texto="Me sorprende ver tantos comentarios positivos. En mi caso no fue una experiencia tan amena. Quizás no era su día." puntuacion={2}/>
             </div>
             <div style={{display:"flex",backgroundColor:"#5B5772",margin:"20px",width:"90vw",height:150,borderRadius:"10px",color:"white",flexDirection:"row",alignItems:"center",justifyContent:"space-evenly",}} >
-                <div><PhoneIcon/><h5>{location.state.telefono}</h5></div>
-                <div><HomeIcon/><h5>{location.state.direccion}</h5></div>
-                <div><MailIcon/><h5>{location.state.mail}</h5></div>
+                <div style={{display:"flex", flexDirection:"row"}}><PhoneIcon/><h5>{location.state.telefono}</h5></div>
+                <div style={{display:"flex", flexDirection:"row"}}><HomeIcon/><h5>{location.state.direccion}</h5></div>
+                <div style={{display:"flex", flexDirection:"row"}}><MailIcon/><h5>{location.state.mail}</h5></div>
             </div>
         </div>
 
