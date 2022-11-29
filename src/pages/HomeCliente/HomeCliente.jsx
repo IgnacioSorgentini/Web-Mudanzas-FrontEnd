@@ -32,7 +32,7 @@ export default function Home(){
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={ { m: 1, minWidth: 200 }} size="small">
                   <InputLabel  id="demo-simple-select-label"><h5>Calificacion</h5></InputLabel>
                   <Select >
-                      <MenuItem value=""><em>Todo</em></MenuItem>
+                      <MenuItem value=""><h6>Todo</h6></MenuItem>
                       <MenuItem value={10}><Rating name="read-only" value={1} size="small"  readOnly/></MenuItem>
                       <MenuItem value={20}><Rating name="read-only" value={2} size="small" readOnly /></MenuItem>
                       <MenuItem value={30}><Rating name="read-only" value={3} size="small" readOnly /></MenuItem>
@@ -46,10 +46,10 @@ export default function Home(){
                   <InputLabel id="demo-simple-select-label"><h5>Zona</h5></InputLabel>
                   <Select
                   >
-                      <MenuItem value=""><em>Todo</em></MenuItem>
-                      <MenuItem value={10}>1</MenuItem>
-                      <MenuItem value={20}>2</MenuItem>
-                      <MenuItem value={30}>3</MenuItem>
+                      <MenuItem value=""><h6>Todo</h6></MenuItem>
+                      <MenuItem value={10}><h6>1</h6></MenuItem>
+                      <MenuItem value={20}><h6>2</h6></MenuItem>
+                      <MenuItem value={30}><h6>3</h6></MenuItem>
                   </Select>
               </FormControl>
             </div>
@@ -57,10 +57,10 @@ export default function Home(){
               <FormControl style={{backgroundColor:"#F2DC9B", borderRadius:"50px"}} sx={{ m: 1, minWidth: 200 }} size="small">
                 <InputLabel id="demo-simple-select-label"><h5>Precios</h5></InputLabel>
                   <Select>
-                    <MenuItem value=""><em>Todo</em></MenuItem>
-                    <MenuItem value={10}>1</MenuItem>
-                    <MenuItem value={20}>2</MenuItem>
-                    <MenuItem value={30}>3</MenuItem>
+                    <MenuItem value=""><h6>Todo</h6></MenuItem>
+                    <MenuItem value={10}><h6>1</h6></MenuItem>
+                    <MenuItem value={20}><h6>2</h6></MenuItem>
+                    <MenuItem value={30}><h6>3</h6></MenuItem>
                   </Select>
               </FormControl>
             </div>
@@ -71,18 +71,18 @@ export default function Home(){
                     <div style={{display:"flex",flex:1,flexDirection:"column",justifyContent:"space-around" ,alignItems:"center"}}>
                     <FormGroup>
                     <optgroup label="Transporte"></optgroup>
-                      <FormControlLabel control={<Checkbox />} label="Transporte de muebles pesados" />
-                      <FormControlLabel control={<Checkbox />} label="Transporte de objetos fragiles" />
-                      <FormControlLabel control={<Checkbox />} label="Mudanza compartida" />
+                      <FormControlLabel control={<Checkbox />} label={<h6>Transporte de muebles pesados</h6>} />
+                      <FormControlLabel control={<Checkbox />} label={<h6>Transporte de objetos fragiles</h6>} />
+                      <FormControlLabel control={<Checkbox />} label={<h6>Mudanza compartida</h6>} />
                       
                       <optgroup label="Experiencia"></optgroup>
-                      <FormControlLabel control={<Checkbox />} label="+ 1 año de experiencia" />
-                      <FormControlLabel control={<Checkbox />} label="+ 5 años de experiencia" />
-                      <FormControlLabel control={<Checkbox />} label="+ 10 años de experiencia" />
+                      <FormControlLabel control={<Checkbox />} label={<h6>+ 1 año de experiencia</h6>} />
+                      <FormControlLabel control={<Checkbox />} label={<h6>+ 5 años de experiencia</h6>} />
+                      <FormControlLabel control={<Checkbox />} label={<h6>+ 10 años de experiencia</h6>} />
                       <optgroup label="Otros"></optgroup>
-                      <FormControlLabel control={<Checkbox  />} label="Descenso de pertenencias" />
-                      <FormControlLabel control={<Checkbox  />} label="Embalaje" />
-                      <FormControlLabel control={<Checkbox  />} label="Guardado de pertenencias" />
+                      <FormControlLabel control={<Checkbox  />} label={<h6>Descenso de pertenencias</h6>} />
+                      <FormControlLabel control={<Checkbox  />} label={<h6>Embalaje</h6>} />
+                      <FormControlLabel control={<Checkbox  />} label={<h6>Guardado de pertenencias</h6>} />
                     </FormGroup>
                     </div>
                   </Select>
