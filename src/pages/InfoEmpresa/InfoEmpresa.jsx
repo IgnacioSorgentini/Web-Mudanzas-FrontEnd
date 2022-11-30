@@ -1,5 +1,7 @@
 import * as React from 'react';
 import '../../Fuentes.css';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 import Comentario from '../../components/Comentario/Comentario';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -146,6 +148,8 @@ const marks = [
 
 export default function Empresa(){
 
+
+    const [valueCalendario, onChangeCalendario] = React.useState(new Date());
 
     const location = useLocation()
     const { from } = location.state
@@ -381,21 +385,17 @@ export default function Empresa(){
                                     <TextField label="Numero de telefono" id="outlined-start-adornment" sx={{ m: 1, width: '25ch' }} InputProps={{startAdornment: <InputAdornment position="start">+54 9</InputAdornment>,}} margin="normal" fullWidth />
                                     <br/>
                                     <br/>
-                                    <DialogContentText>Elija un medio de pago</DialogContentText>
-                                    <FormControl fullWidth>
-                                      <InputLabel id="demo-simple-select-label">Medio de pago</InputLabel>
-                                      <Select
-                                        labelId="demo-simple-select-label"
-                                        id="demo-simple-select"
-                                        value={medioDePago}
-                                        label="Medio de pago"
-                                        onChange={handleChangeMedioDePago}
-                                      >
-                                        <MenuItem value={10}>MedioDePago1</MenuItem>
-                                        <MenuItem value={20}>MedioDePago2</MenuItem>
-                                        <MenuItem value={30}>MedioDePago3</MenuItem>
-                                      </Select>
-                                    </FormControl>
+                                    <DialogContentText>
+                                        Elija una fecha determinada para realizar la mudanza
+                                    </DialogContentText>
+                                    <div style={{display:"flex", justifyContent:"center"}}>
+                                    <Calendar onChange={onChangeCalendario} value={valueCalendario} />
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <DialogContentText>
+                                        El pago se puede realizar únicamente por MercadoPago
+                                    </DialogContentText>
                                 </DialogContent>
                                 <DialogActions>
                                     <Button autoFocus onClick={handleCloseContratar}>

@@ -5,14 +5,36 @@ import TextField from '@mui/material/TextField';
 import Alert from '@mui/material/Alert';
 import './InicioSesion.css';
 import RecuperacionContraseña from "../RecuperacionContraseña/RecuperacionContraseña";
-
 import {
     BrowserRouter,
     Routes,
     Route,
     Link
   } from "react-router-dom";
-function InicioSesion(props){
+
+
+
+  function InicioSesion(props){
+
+    function comprobarUsuario () {
+        fetch("https://69a4-186-122-60-88.sa.ngrok.io/me-mudo-back/v1/login/authenticate", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            body: JSON.stringify({email: user, password: password})
+          }).then(result=> { return result.json()})
+          .then(data=> {if(data.code==200){
+            console.log(data.code)
+            window.pantalla = data.sessionEnc;
+            console.log(window.pantalla)
+            setValidar(0)
+           
+          }else{
+            setError(0)
+          }})
+    }
     
     const [buttonPopupRecuperarContraseña, setButtonPopupRecuperarContraseña] = useState(false);
 
@@ -35,15 +57,6 @@ function InicioSesion(props){
 	const handlePasswordChange = (e) => {
     	setPassword(e.target.value);
   	};
-
-    function comprobarUsuario () {
-        if ((userValido === user && pwValida === password) || (userValido2 === user && pwValida2 === password) ){
-            setValidar(0)
-        }
-        else{
-            setError(0)
-        }
-    }
 
     const comprobarUsuarioConEnter = (e) => {
         if (e.key == 'Enter') {
@@ -81,7 +94,7 @@ function InicioSesion(props){
     ) : "";
     }
     else{
-        if (user == userValido){
+        if (true){
             window.location.replace("/HomeCliente")
         }
         else{
